@@ -13,7 +13,7 @@
 		position: relative;
 		top: 35%;
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-		font-size: 10rem;
+		font-size: 5vw;
 		font-weight: 600;
 	}
 </style>
