@@ -17,6 +17,14 @@
 
 	img {
 		width: 20vw;
+
+		@media only screen and (max-width: 1024px) {
+			width: 30vw;
+		}
+
+		@media only screen and (max-width: 500px) {
+			width: 40vw;
+		}
 	}
 
 	p {
@@ -24,5 +32,9 @@
 		font-size: 5vw;
 		font-weight: 600;
 		color: $wv-logo-kernel-color;
+
+		@media only screen and (max-width: 500px) {
+			font-size: 7vw;
+		}
 	}
 </style>
