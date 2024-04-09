@@ -3,7 +3,6 @@ import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
-// https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [vue()],
 	resolve: {
@@ -14,7 +13,7 @@ export default defineConfig({
 	css: {
 		preprocessorOptions: {
 			scss: {
-				additionalData: `@import "@/styles/_color_variables.scss";`,
+				additionalData: `@import "@/styles/app.scss";`,
 			},
 		},
 	},
