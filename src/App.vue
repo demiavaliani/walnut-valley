@@ -1,9 +1,9 @@
 <template>
-	<ComingSoon />
+	<NavBar />
 </template>
 
 <script setup lang="ts">
-	import ComingSoon from './views/ComingSoon.vue';
+	import NavBar from '@/components/NavBar.vue';
 </script>
 
 <style lang="scss"></style>

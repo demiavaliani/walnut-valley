@@ -1,9 +1,8 @@
-import { ref, computed } from 'vue';
 import { defineStore } from 'pinia';
-import { type SiteLanguages } from '@/types';
+import { SiteLanguages } from '@/types';
 
 export const useSite = defineStore('site', () => {
 	return {
-		siteLanguage: 'georgian' as keyof SiteLanguages,
+		siteLanguage: 'georgian' as keyof typeof SiteLanguages,
 	};
 });

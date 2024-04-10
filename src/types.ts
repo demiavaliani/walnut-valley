@@ -1,5 +1,5 @@
-export interface SiteLanguages {
-	georgian: string;
-	english: string;
-	russian: string;
-}
+export const SiteLanguages = {
+	georgian: 'georgian',
+	english: 'english',
+	russian: 'russian',
+} as const;
