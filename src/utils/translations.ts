@@ -31,6 +31,8 @@ const languages = {
 		'navbar.our-orchards': 'ჩვენი ბაღები',
 		'navbar.our-product': 'ჩვენი პროდუქტი',
 		'navbar.contact-us': 'დაგვიკავშირდით',
+		'footer.description':
+			'მსოფლიო ინდუსტრია საქართველოს თხილის ერთ-ერთ უმსხვილეს ექსპორტიორ ქვეყნად იცნობს.',
 	},
 	english: {
 		'navbar.main': 'Home',
@@ -41,6 +43,7 @@ const languages = {
 		'navbar.our-orchards': 'Our orchards',
 		'navbar.our-product': 'Our product',
 		'navbar.contact-us': 'Contact us',
+		'footer.description': 'Georgia, a global hazelnut powerhouse, ranks #5 in exports since 2012.',
 	},
 	russian: {
 		'navbar.main': 'Главная',
@@ -51,5 +54,7 @@ const languages = {
 		'navbar.our-orchards': 'Наши сады',
 		'navbar.our-product': 'Наш продукт',
 		'navbar.contact-us': 'Контактная информация',
+		'footer.description':
+			'Мировая промышленность знает Грузию, как одного из крупнейших экспортеров фундука.',
 	},
 };
