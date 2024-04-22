@@ -157,9 +157,9 @@
 
 <style lang="scss">
 	.wv-footer {
-		align-self: flex-end;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
+		align-self: flex-end;
 		gap: 5rem;
 		width: 100%;
 		padding: 2rem;
