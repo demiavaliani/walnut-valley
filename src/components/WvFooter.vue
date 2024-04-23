@@ -163,6 +163,7 @@
 		gap: 5rem;
 		width: 100%;
 		padding: 2rem;
+		background-color: #fafafa;
 
 		&__column {
 			font-weight: $wv-fw-regular;
@@ -302,6 +303,7 @@
 		align-self: flex-end;
 		width: 100%;
 		padding: 2rem;
+		background-color: #fafafa;
 
 		&__column {
 			font-weight: $wv-fw-regular;
