@@ -383,8 +383,8 @@
 
 			&__section-subtitle,
 			&__text-section {
-				font-size: 1.2rem;
-				line-height: 2.2rem;
+				font-size: 1.4rem;
+				line-height: 2.4rem;
 			}
 
 			&__text-section {

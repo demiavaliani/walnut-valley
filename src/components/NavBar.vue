@@ -1,31 +1,33 @@
 <template>
 	<div v-if="!isMobile" class="navbar">
 		<div class="navbar__left">
-			<button>
+			<RouterLink :to="{ name: Views.MAIN }">
 				<img src="@/assets/images/logo-horizontal.svg" />
-			</button>
+			</RouterLink>
 		</div>
 
 		<div class="navbar__middle">
-			<button type="button" class="navbar__item">
+			<RouterLink :to="{ name: Views.MAIN }" class="navbar__item">
 				{{ t('navbar.main') }}
-			</button>
+			</RouterLink>
 			<div class="navbar__item-dropdown">
-				<button type="button" class="navbar__item">
+				<button class="navbar__item">
 					{{ t('navbar.company') }}
 				</button>
 				<div class="navbar__item-dropdown-content">
-					<button>{{ t('navbar.company.about-us') }}</button>
+					<RouterLink :to="{ name: Views.OUR_COMPANY }">{{
+						t('navbar.company.about-us')
+					}}</RouterLink>
 					<button>{{ t('navbar.company.our-history') }}</button>
 				</div>
 			</div>
-			<button type="button" class="navbar__item">
+			<button class="navbar__item">
 				{{ t('navbar.production') }}
 			</button>
-			<button type="button" class="navbar__item">
+			<button class="navbar__item">
 				{{ t('navbar.our-orchards') }}
 			</button>
-			<button type="button" class="navbar__item">
+			<button class="navbar__item">
 				{{ t('navbar.our-product') }}
 			</button>
 		</div>
@@ -40,35 +42,37 @@
 	</div>
 
 	<div v-else class="navbar-mobile">
-		<button>
+		<RouterLink :to="{ name: Views.MAIN }">
 			<img class="navbar-mobile__logo" src="@/assets/images/logo-horizontal.svg" />
-		</button>
+		</RouterLink>
 		<button @click="isHamburgerOpen = !isHamburgerOpen">
 			<img class="navbar-mobile__hamburger" src="@/assets/images/hamburger-menu.svg" />
 		</button>
 
 		<div v-if="isHamburgerOpen" class="navbar-mobile__menu">
-			<button type="button" class="navbar-mobile__item">
+			<RouterLink :to="{ name: Views.MAIN }" class="navbar-mobile__item">
 				{{ t('navbar.main') }}
-			</button>
+			</RouterLink>
 
 			<div class="navbar-mobile__item-dropdown">
-				<button type="button" class="navbar-mobile__item">
+				<button class="navbar-mobile__item">
 					{{ t('navbar.company') }}
 				</button>
 				<div class="navbar-mobile__item-dropdown-content">
-					<button>{{ t('navbar.company.about-us') }}</button>
+					<RouterLink :to="{ name: Views.OUR_COMPANY }">{{
+						t('navbar.company.about-us')
+					}}</RouterLink>
 					<button>{{ t('navbar.company.our-history') }}</button>
 				</div>
 			</div>
 
-			<button type="button" class="navbar-mobile__item">
+			<button class="navbar-mobile__item">
 				{{ t('navbar.production') }}
 			</button>
-			<button type="button" class="navbar-mobile__item">
+			<button class="navbar-mobile__item">
 				{{ t('navbar.our-orchards') }}
 			</button>
-			<button type="button" class="navbar-mobile__item">
+			<button class="navbar-mobile__item">
 				{{ t('navbar.our-product') }}
 			</button>
 
@@ -89,6 +93,7 @@
 	import { useTranslation } from '@/utils/translations';
 	import WvButton from './WvButton.vue';
 	import { calculateMediaQueryMax } from '@/utils/mediaQuery';
+	import { Views } from '@/constants';
 
 	const store = useSite();
 	const { t } = useTranslation();
