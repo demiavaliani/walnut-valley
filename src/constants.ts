@@ -5,5 +5,5 @@ export const Views = {
 	PRODUCTION: 'production',
 	ORCHARDS: 'orchards',
 	OUR_PRODUCT: 'our_product',
-	CONTACTS: 'contacts',
+	CONTACT_US: 'contact_us',
 } as const;
