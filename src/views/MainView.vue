@@ -233,7 +233,7 @@
 
 		&__section-title {
 			margin-bottom: 1.2rem;
-			font-size: 4rem;
+			font-size: 3.6rem;
 			font-weight: $wv-fw-semi-bold;
 			line-height: 4.8rem;
 			color: #6c7340;
@@ -372,6 +372,37 @@
 				&__right {
 					right: 1rem;
 				}
+			}
+		}
+
+		@media only screen and (max-width: 430px) {
+			&__section-title {
+				font-size: 2rem;
+				line-height: 2.4rem;
+			}
+
+			&__section-subtitle,
+			&__text-section {
+				font-size: 1.4rem;
+				line-height: 2.4rem;
+			}
+
+			&__text-section {
+				margin: 4rem 0;
+			}
+
+			&__text-section:last-of-type {
+				margin-bottom: 6rem;
+			}
+
+			&__product-title {
+				font-size: 1.4rem;
+				line-height: 1.7rem;
+			}
+
+			&__product-description {
+				font-size: 1.2rem;
+				line-height: 2rem;
 			}
 		}
 	}

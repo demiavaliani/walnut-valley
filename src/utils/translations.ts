@@ -61,6 +61,19 @@ const languages = {
 		კაკლის წარმოების ბაზრის განვითარებაში მნიშვნელოვან როლს თამაშობს სახელმწიფო. კერძოდ, ადგილობრივი მწარმოებლებისთვის ხელმისავწდომია იაფი კრედიტები და გრანტები, ასევე სახელმწიფო უზრუნველყოფს წვდომას საერთაშორისო ექსპერტთა ჩართულობაზე ადგილობრივი წარმოების პროცესში, რაც ტექნოლოგიებისა და, შედეგად, ადგილობრივ საწარმოთა ეფექტიანობის ზრდას განაპირობებს.<br><br>
 		ვამაყობთ, რომ კაკლის ველი ერთ-ერთი პირველი კომპანიაა, რომელიც საქართველოს კაკლის ექსპორტიორ ქვეყნად გარდაქმნის პროცესში მონაწილეობს. გვჯერა, რომ ჩვენი კომპანიის როლი გადამწყვეტი იქნება ამ საქმეში.
 		`,
+		'banner.header.company': 'ჩვენი კომპანია',
+		'our-history.vision.title': 'ხედვა',
+		'our-history.vision.description': `
+			საქართველო ახალი ქვეყანაა კაკლის მწარმოებელთა მსოფლიო რუკაზე. ჩვენ ვართ ერთ-ერთი პირველი კომპანია, რომელიც ჩვენს ქვეყანას და ქართულ კაკალს მსოფლიო ბაზარზე წარადგენს. ეს შესაძლებლობებთან ერთად დიდი გამოწვევა და პასუხისმგებლობაა.<br><br>
+			ჩვენ მოწოდებული ვართ ვაწარმოოთ უმაღლესი ხარისხის პროდუქტი, ვიყოთ სანდო პარტნიორი საერთაშორისო ორგანიზაციებისთვის და შევქმნათ ეროვნული ბრენდი, რომელიც გზას გაუკვალავს მსოფლიო ბაზარზე როგორც მსხვილ ადგილობრივ მწარმოებლებს, ასევე მცირე და საშუალო ფერმერებს.<br><br>
+			ჩვენ ყოველთვის თამამად უნდა შეგვეძლოს ვთქვათ - “სიამაყით საქართველოდან!” 
+		`,
+		'our-history.company.title': 'კომპანია',
+		'our-history.company.description': `
+			კაკლის ველი ქართული კაკლის მწარმოებელი კომპანიაა. კომპანიამ კაკლის ბაღები 2015 წელს, მცხეთის მუნიციპალიტეტში, სოფელ ძალისში, გააშენა. კაკლის ველის ბაღები გაშენებულია X ჰა ტერიტორიაზე და ყოველწლიურად XX ტონა კაკლის მოსავალს იძლევა. მოსავლიანობა პიკს 2025 წლისთვის მიაღწევს, რა დროისთვისაც ყოვეწლიური XX ტონამდე მოსავლის მიღება იგეგმება.<br><br>
+			ბაღების გაშენებასა და დაგეგმარებაში კომპანიას კონსულტაციას ესპანეთიდან მოწვეული ექსპერტები უწევდნენ. ბაღები აღჭურვილია ირიგაციის თანამედროვე სისტემით. კაკლის ველის თანამედროვე სტანდარტების საწარმო კი, აღჭურვილია ყველა საჭირო ტექნოლოგიითა და საწარმო ხაზით, რომელიც მოსავლის გადამუშავებას - კაკლის გასუფთავებას, გაშრობას, სორტირებას - უზრუნველყოფს.<br><br>
+			ამ ეტაპზე კაკლის ველი აწარმოებს უმაღლესი ხარისხის ჩენდლერის ჯიშის კაკალს ნაჭუჭით, რომელიც ძირითადად საექსპორტო ბაზრებზე რეალიზაციისთვისაა განკუთვნილი.
+		`,
 	},
 	english: {
 		'navbar.main': 'Home',
@@ -99,6 +112,19 @@ const languages = {
 		Contrary to these challenges, world experts have evaluated walnuts produced in Georgia and found them to be on par with, if not superior to, those produced in leading countries such as Chile and the USA, especially concerning external parameters. When cultivated under optimal conditions, Georgia's climate and the exceptional quality of its water contribute to walnuts with a distinctive taste, unique sweetness, and notable whiteness.<br><br>
 		The Georgian government actively supports walnut production's development, offering affordable credits and grants to local manufacturers. Access to international experts enhances technological advancements, boosting the efficiency of local enterprises.<br><br>
 		Walnut Valley takes pride in being among the first companies contributing to Georgia's transformation into a walnut-exporting nation. The company believes its role is crucial and influential in this endeavor.
+		`,
+		'banner.header.company': 'Our Company',
+		'our-history.vision.title': 'Vision',
+		'our-history.vision.description': `
+			Georgia is emerging as a new player on the global stage of walnut production, and our company is at the forefront, poised to introduce our country and its walnuts to the world market. This endeavor represents not only a significant challenge but also a tremendous responsibility coupled with abundant opportunities.<br><br>
+			Our commitment is unwavering – we strive to deliver the highest quality walnut products, positioning ourselves as a trustworthy partner for international organizations. Beyond that, our vision extends to the creation of a national brand. This brand will not only serve as a navigator, forging a path into the global market, but also as a symbol of pride for both major local producers and small to medium-sized farmers.<br><br>
+			Embracing this challenge, we aim to consistently declare, with unwavering confidence, "proudly Georgian!"
+		`,
+		'our-history.company.title': 'Company',
+		'our-history.company.description': `
+			Walnut Valley, a Georgian walnut producer, established orchards in 2015 in Dzalisi village, Mtskheta municipality. Spanning X hectares, the orchards yield XX tons annually, reaching a peak by 2025.<br><br>
+			Walnut Valley's orchards, crafted with Spanish expertise, boast a modern irrigation system. The production facility incorporates advanced technologies for cleaning, drying, and sorting walnuts. Specializing in premium Chandler walnuts in shell, Walnut Valley primarily caters to export markets.<br><br>
+			The exceptional quality of Walnut Valley's products and the abundant orchard yield result from the region's moderately humid subtropical climate. This, coupled with meticulous initial planning and consistent maintenance, contributes to our success.
 		`,
 	},
 	russian: {
@@ -139,6 +165,19 @@ const languages = {
 		По оценкам мировых экспертов, грецкие орехи, произведенные в Грузии, по внешним параметрам не уступают грецким орехам, произведенным в ведущих странах-производителях мира (Чили и США), а по вкусовым качествам даже превосходят их. Климат Грузии и уникальное качество воды при правильных условиях выращивания придают грецким орехам характерный вкус, особую сладость и белизну.<br><br>
 		Государство также играет важную роль в развитии рынка производства грецкого ореха. В частности, местным производителям доступны недорогие кредиты и гранты, государство также привлекает международных экспертов в местный производственный процесс, что открывает доступ к технологиям и, как следствие, повышает эффективность местных предприятий.<br><br>
 		Мы гордимся тем, что Walnut Valley является одной из первых компаний, которая принимает участие в процессе превращения Грузии в одной из важных стран-экспортера грецкого ореха в мире. Мы верим, что роль флагмана нашей компании будет значимой и ценной в этом процессе.
+		`,
+		'banner.header.company': 'Наша Компания',
+		'our-history.vision.title': 'Видение',
+		'our-history.vision.description': `
+			Грузия – новая страна на карте мира производителей грецкого ореха. Мы одна из первых компаний, которая представит нашу страну и грузинские грецкие орехи на мировом рынке. Это несомненно открывает большие возможности для нашей компании, но, тем самым это огромная ответственность.<br><br>
+			Мы стремимся производить продукцию высочайшего качества, быть надежным партнером для международных организаций и создать национальный бренд, который откроет путь на мировой рынок как крупным местным производителям, так и мелким и средним фермерам.<br><br>
+			Мы всегда должны иметь возможность с полным основанием сказать – «С гордостью из Грузии!»
+		`,
+		'our-history.company.title': 'Компания',
+		'our-history.company.description': `
+			Walnut Valley — грузинская компания по производству грецкого ореха. В 2015 году компания посадила ореховые сады в селе Дзалиси Мцхетского муниципалитета. Сады Walnut Valley засажены на площади Х га и дают урожай в объеме XX тонн грецких орехов ежегодно. Своего пика урожайность достигнет к 2025 году, к этому времени планируется собирать до XX тонн ежегодно.<br><br>
+			При посадке и планировке садов компанию консультировали специалисты из Испании. Сады имеют современную систему ирригации. Предприятие компании, которое соответствует всем современным стандартом ореховой отрасли, оснащено всеми необходимыми технологиями и производственными линиями, обеспечивающими обработку урожая – очистку, сушку и сортировку грецких орехов. Walnut Valley производит грецкие орехи Чандлер высочайшего качества, которые в основном предназначены для экспортных рынков.<br><br>
+			Высочайшее качество продукции Walnut Valley и обильный урожай садов обусловлены как умеренно влажным субтропическим климатом региона, так и первоначальным точным и эффективным планированием садов и постоянным правильным уходом.
 		`,
 	},
 };

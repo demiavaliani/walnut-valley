@@ -7,31 +7,33 @@
 		</div>
 
 		<div class="wv-footer__column wv-footer__column-two">
-			<button type="button">
+			<RouterLink :to="{ name: Views.MAIN }" class="wv-footer__nav-item">
 				{{ t('navbar.main') }}
-			</button>
+			</RouterLink>
 
 			<div class="wv-footer__company-item-dropdown">
-				<button type="button" class="wv-footer__company-item">
+				<button class="wv-footer__company-item">
 					{{ t('navbar.company') }}
 				</button>
 
 				<div class="wv-footer__company-item-dropdown-content">
-					<button>{{ t('navbar.company.about-us') }}</button>
+					<RouterLink :to="{ name: Views.OUR_COMPANY }" class="wv-footer__nav-item">
+						{{ t('navbar.company.about-us') }}
+					</RouterLink>
 
-					<button>{{ t('navbar.company.our-history') }}</button>
+					<button class="wv-footer__nav-item">{{ t('navbar.company.our-history') }}</button>
 				</div>
 			</div>
 
-			<button type="button">
+			<button class="wv-footer__nav-item">
 				{{ t('navbar.production') }}
 			</button>
 
-			<button type="button">
+			<button class="wv-footer__nav-item">
 				{{ t('navbar.our-orchards') }}
 			</button>
 
-			<button type="button">
+			<button class="wv-footer__nav-item">
 				{{ t('navbar.our-product') }}
 			</button>
 		</div>
@@ -77,31 +79,33 @@
 		</div>
 
 		<div class="wv-footer-mobile__column wv-footer-mobile__column-two">
-			<button type="button">
+			<RouterLink :to="{ name: Views.MAIN }" class="wv-footer-mobile__nav-item">
 				{{ t('navbar.main') }}
-			</button>
+			</RouterLink>
 
 			<div class="wv-footer-mobile__company-item-dropdown">
-				<button type="button" class="wv-footer-mobile__company-item">
+				<button class="wv-footer-mobile__company-item">
 					{{ t('navbar.company') }}
 				</button>
 
 				<div class="wv-footer-mobile__company-item-dropdown-content">
-					<button>{{ t('navbar.company.about-us') }}</button>
+					<RouterLink :to="{ name: Views.OUR_COMPANY }" class="wv-footer-mobile__nav-item">
+						{{ t('navbar.company.about-us') }}
+					</RouterLink>
 
-					<button>{{ t('navbar.company.our-history') }}</button>
+					<button class="wv-footer-mobile__nav-item">{{ t('navbar.company.our-history') }}</button>
 				</div>
 			</div>
 
-			<button type="button">
+			<button class="wv-footer-mobile__nav-item">
 				{{ t('navbar.production') }}
 			</button>
 
-			<button type="button">
+			<button class="wv-footer-mobile__nav-item">
 				{{ t('navbar.our-orchards') }}
 			</button>
 
-			<button type="button">
+			<button class="wv-footer-mobile__nav-item">
 				{{ t('navbar.our-product') }}
 			</button>
 		</div>
@@ -144,6 +148,7 @@
 	import { ref, onMounted } from 'vue';
 	import { useTranslation } from '@/utils/translations';
 	import { calculateMediaQueryMax } from '@/utils/mediaQuery';
+	import { Views } from '@/constants';
 
 	const { t } = useTranslation();
 
@@ -163,6 +168,7 @@
 		gap: 5rem;
 		width: 100%;
 		padding: 2rem;
+		background-color: #fafafa;
 
 		&__column {
 			font-weight: $wv-fw-regular;
@@ -183,11 +189,18 @@
 		&__column-two {
 			display: flex;
 			flex-direction: column;
+			align-items: flex-start;
 			gap: 1.2rem;
 			font-size: 1.6rem;
+		}
 
-			button {
-				line-height: 2.4rem;
+		&__nav-item {
+			line-height: 2.4rem;
+			color: #222222;
+			z-index: 1;
+
+			&:hover {
+				color: #6c7340;
 			}
 		}
 
@@ -229,10 +242,6 @@
 				&:hover {
 					color: #6c7340;
 				}
-			}
-
-			&:hover {
-				display: flex;
 			}
 		}
 
@@ -302,6 +311,7 @@
 		align-self: flex-end;
 		width: 100%;
 		padding: 2rem;
+		background-color: #fafafa;
 
 		&__column {
 			font-weight: $wv-fw-regular;
@@ -316,12 +326,19 @@
 		&__column-two {
 			display: flex;
 			flex-direction: column;
+			align-items: flex-start;
 			gap: 1.2rem;
 			margin-bottom: 2.4rem;
 			font-size: 1.6rem;
+		}
 
-			button {
-				line-height: 2.4rem;
+		&__nav-item {
+			line-height: 2.4rem;
+			color: #222222;
+			z-index: 1;
+
+			&:hover {
+				color: #6c7340;
 			}
 		}
 
@@ -363,10 +380,6 @@
 				&:hover {
 					color: #6c7340;
 				}
-			}
-
-			&:hover {
-				display: flex;
 			}
 		}
 
