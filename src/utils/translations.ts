@@ -74,6 +74,12 @@ const languages = {
 			ბაღების გაშენებასა და დაგეგმარებაში კომპანიას კონსულტაციას ესპანეთიდან მოწვეული ექსპერტები უწევდნენ. ბაღები აღჭურვილია ირიგაციის თანამედროვე სისტემით. კაკლის ველის თანამედროვე სტანდარტების საწარმო კი, აღჭურვილია ყველა საჭირო ტექნოლოგიითა და საწარმო ხაზით, რომელიც მოსავლის გადამუშავებას - კაკლის გასუფთავებას, გაშრობას, სორტირებას - უზრუნველყოფს.<br><br>
 			ამ ეტაპზე კაკლის ველი აწარმოებს უმაღლესი ხარისხის ჩენდლერის ჯიშის კაკალს ნაჭუჭით, რომელიც ძირითადად საექსპორტო ბაზრებზე რეალიზაციისთვისაა განკუთვნილი.
 		`,
+		'contact-us.header': 'დაგვიკავშირდით',
+		'contact-us.label-name': 'სრული სახელი',
+		'contact-us.label-phone': 'ტელეფონის ნომერი',
+		'contact-us.label-email': 'ელ. ფოსტა',
+		'contact-us.label-message': 'შეტყობინება',
+		'contact-us.submit-button': 'გაგზავნა',
 	},
 	english: {
 		'navbar.main': 'Home',
@@ -126,6 +132,12 @@ const languages = {
 			Walnut Valley's orchards, crafted with Spanish expertise, boast a modern irrigation system. The production facility incorporates advanced technologies for cleaning, drying, and sorting walnuts. Specializing in premium Chandler walnuts in shell, Walnut Valley primarily caters to export markets.<br><br>
 			The exceptional quality of Walnut Valley's products and the abundant orchard yield result from the region's moderately humid subtropical climate. This, coupled with meticulous initial planning and consistent maintenance, contributes to our success.
 		`,
+		'contact-us.header': 'Contact us',
+		'contact-us.label-name': 'Full name',
+		'contact-us.label-phone': 'Phone',
+		'contact-us.label-email': 'Email',
+		'contact-us.label-message': 'Message',
+		'contact-us.submit-button': 'Send',
 	},
 	russian: {
 		'navbar.main': 'Главная',
@@ -179,5 +191,11 @@ const languages = {
 			При посадке и планировке садов компанию консультировали специалисты из Испании. Сады имеют современную систему ирригации. Предприятие компании, которое соответствует всем современным стандартом ореховой отрасли, оснащено всеми необходимыми технологиями и производственными линиями, обеспечивающими обработку урожая – очистку, сушку и сортировку грецких орехов. Walnut Valley производит грецкие орехи Чандлер высочайшего качества, которые в основном предназначены для экспортных рынков.<br><br>
 			Высочайшее качество продукции Walnut Valley и обильный урожай садов обусловлены как умеренно влажным субтропическим климатом региона, так и первоначальным точным и эффективным планированием садов и постоянным правильным уходом.
 		`,
+		'contact-us.header': 'Свяжитесь с нами',
+		'contact-us.label-name': 'Полное имя',
+		'contact-us.label-phone': 'Телефон',
+		'contact-us.label-email': 'Эл. почта',
+		'contact-us.label-message': 'Сообщение',
+		'contact-us.submit-button': 'Отправить',
 	},
 };
