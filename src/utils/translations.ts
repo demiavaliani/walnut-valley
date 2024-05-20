@@ -80,6 +80,8 @@ const languages = {
 		'contact-us.label-email': 'ელ. ფოსტა',
 		'contact-us.label-message': 'შეტყობინება',
 		'contact-us.submit-button': 'გაგზავნა',
+		'contact-us.form-validity-message': 'გთხოვთ შეავსოთ ველი',
+		'contact-us.form-validity-message.email': 'გთხოვთ სწორედ შეიყვანოთ ელ. ფოსტა',
 	},
 	english: {
 		'navbar.main': 'Home',
@@ -138,6 +140,8 @@ const languages = {
 		'contact-us.label-email': 'Email',
 		'contact-us.label-message': 'Message',
 		'contact-us.submit-button': 'Send',
+		'contact-us.form-validity-message': 'Please fill in the field',
+		'contact-us.form-validity-message.email': 'Please fill correct email',
 	},
 	russian: {
 		'navbar.main': 'Главная',
@@ -197,5 +201,8 @@ const languages = {
 		'contact-us.label-email': 'Эл. почта',
 		'contact-us.label-message': 'Сообщение',
 		'contact-us.submit-button': 'Отправить',
+		'contact-us.form-validity-message': 'Пожалуйста, заполните поле',
+		'contact-us.form-validity-message.email':
+			'Пожалуйста, заполните правильный адрес электронной почты',
 	},
 };

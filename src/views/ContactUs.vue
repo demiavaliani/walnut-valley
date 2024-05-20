@@ -31,31 +31,43 @@
 			<div class="contact-us__sides-right">
 				<form class="contact-us__form" ref="contactForm" @submit.prevent="sendEmail">
 					<input
+						required
 						class="contact-us__form-input"
 						:placeholder="t('contact-us.label-name')"
 						type="text"
 						name="contact_name"
+						@invalid="validate($event.target)"
+						@input="validate($event.target)"
 					/>
 
 					<div class="contact-us__email-phone-wrapper">
 						<input
+							required
 							class="contact-us__form-input"
 							:placeholder="t('contact-us.label-email')"
 							type="email"
 							name="contact_email"
+							@invalid="validate($event.target)"
+							@input="validate($event.target)"
 						/>
 						<input
+							required
 							class="contact-us__form-input"
 							:placeholder="t('contact-us.label-phone')"
 							type="tel"
 							name="contact_phone"
+							@invalid="validate($event.target)"
+							@input="validate($event.target)"
 						/>
 					</div>
 
 					<textarea
+						required
 						class="contact-us__form-input contact-us__form-input-textarea"
 						:placeholder="t('contact-us.label-message')"
 						name="contact_message"
+						@invalid="validate($event.target)"
+						@input="validate($event.target)"
 					></textarea>
 
 					<WvButton
@@ -91,6 +103,22 @@
 	const { t } = useTranslation();
 
 	const contactForm = ref<HTMLFormElement | null>();
+
+	const validate = (el: HTMLInputElement | HTMLTextAreaElement | EventTarget | null) => {
+		const element = el as HTMLInputElement | HTMLTextAreaElement;
+		const validity = element.validity;
+		const isInvalid = validity.valueMissing || validity.badInput || validity.typeMismatch;
+
+		if (isInvalid) {
+			element.setCustomValidity(t('contact-us.form-validity-message'));
+
+			if (element.type === 'email') {
+				element.setCustomValidity(t('contact-us.form-validity-message.email'));
+			}
+		} else {
+			element.setCustomValidity('');
+		}
+	};
 
 	const sendEmail = () => {
 		if (contactForm.value) {
