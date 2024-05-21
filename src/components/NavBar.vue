@@ -37,7 +37,9 @@
 				<img src="@/assets/images/language-globe.svg" />
 				<p>{{ siteLanguageFormatted }}</p>
 			</button>
-			<WvButton :text="t('navbar.contact-us')"></WvButton>
+			<RouterLink :to="{ name: Views.CONTACT_US }">
+				<WvButton :text="t('navbar.contact-us')"></WvButton>
+			</RouterLink>
 		</div>
 	</div>
 
@@ -81,7 +83,9 @@
 					<img src="@/assets/images/language-globe.svg" />
 					<p>{{ siteLanguageFormatted }}</p>
 				</button>
-				<WvButton :text="t('navbar.contact-us')"></WvButton>
+				<RouterLink :to="{ name: Views.CONTACT_US }">
+					<WvButton :text="t('navbar.contact-us')"></WvButton>
+				</RouterLink>
 			</div>
 		</div>
 	</div>
