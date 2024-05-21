@@ -1,23 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import MainView from '@/views/MainView.vue';
-import OurCompany from '@/views/OurCompany.vue';
-import ContactUs from '@/views/ContactUs.vue';
+import { Views } from '@/constants';
+import { MainView, OurCompany, ContactUs, Production } from '@/views';
 
 const routes = [
 	{
 		path: '/',
-		name: 'main',
+		name: Views.MAIN,
 		component: MainView,
 	},
 	{
 		path: '/our-company',
-		name: 'our_company',
+		name: Views.OUR_COMPANY,
 		component: OurCompany,
 	},
 	{
 		path: '/contact-us',
-		name: 'contact_us',
+		name: Views.CONTACT_US,
 		component: ContactUs,
+	},
+	{
+		path: '/production',
+		name: Views.PRODUCTION,
+		component: Production,
 	},
 ];
 
