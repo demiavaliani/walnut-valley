@@ -60,35 +60,7 @@
 				{{ t('main.our-orchards-description') }}
 			</p>
 
-			<div class="main-view__orchards-carousel">
-				<Carousel
-					:items-to-show="carouselVisibleItems"
-					:wrap-around="true"
-					:mouse-drag="false"
-					ref="orchardsCarousel"
-				>
-					<slide v-for="slide in slides" :key="slide">
-						<div class="carousel__item">
-							<img :src="getImageUrl(slide.image)" />
-						</div>
-					</slide>
-
-					<template #addons>
-						<button
-							class="carousel-nav-button carousel-nav-button__left"
-							@click="prevSlideOrchards"
-						>
-							<img src="../assets/images/arrow-left.svg" />
-						</button>
-						<button
-							class="carousel-nav-button carousel-nav-button__right"
-							@click="nextSlideOrchards"
-						>
-							<img src="../assets/images/arrow-right.svg" />
-						</button>
-					</template>
-				</Carousel>
-			</div>
+			<CarouselWrapper :slides="slides" :items-to-show="carouselVisibleItems" />
 		</div>
 
 		<div
@@ -105,35 +77,7 @@
 				{{ t('main.our-production-description') }}
 			</p>
 
-			<div class="main-view__production-carousel">
-				<Carousel
-					:items-to-show="carouselVisibleItems"
-					:wrap-around="true"
-					:mouse-drag="false"
-					ref="productionCarousel"
-				>
-					<slide v-for="slide in slides" :key="slide">
-						<div class="carousel__item">
-							<img :src="getImageUrl(slide.image)" />
-						</div>
-					</slide>
-
-					<template #addons>
-						<button
-							class="carousel-nav-button carousel-nav-button__left"
-							@click="prevSlideProduction"
-						>
-							<img src="../assets/images/arrow-left.svg" />
-						</button>
-						<button
-							class="carousel-nav-button carousel-nav-button__right"
-							@click="nextSlideProduction"
-						>
-							<img src="../assets/images/arrow-right.svg" />
-						</button>
-					</template>
-				</Carousel>
-			</div>
+			<CarouselWrapper :slides="slides" :items-to-show="carouselVisibleItems" />
 		</div>
 
 		<div class="main-view__text-section main-view__text-section--narrow">
@@ -143,15 +87,12 @@
 </template>
 
 <script lang="ts" setup>
-	import { onMounted, ref } from 'vue';
-	import { useTranslation, calculateMediaQueryMax } from '@/utils';
-	import 'vue3-carousel/dist/carousel.css';
-	import { Carousel, Slide, Navigation } from 'vue3-carousel';
+	import { ref, onMounted } from 'vue';
+	import { calculateMediaQueryMax, useTranslation } from '@/utils';
+	import { CarouselWrapper } from '@/components';
 
 	const { t } = useTranslation();
 
-	const orchardsCarousel = ref();
-	const productionCarousel = ref();
 	const slides = [
 		{
 			title: 'Slide #1',
@@ -195,31 +136,10 @@
 		},
 	];
 
-	const carouselVisibleItems = ref<number>();
+	const carouselVisibleItems = ref();
 
-	const getImageUrl = (name: string) => {
-		return new URL(`../assets/images/${name}`, import.meta.url).href;
-	};
-
-	const nextSlideOrchards = () => {
-		orchardsCarousel.value.next();
-	};
-
-	const prevSlideOrchards = () => {
-		orchardsCarousel.value.prev();
-	};
-
-	const nextSlideProduction = () => {
-		productionCarousel.value.next();
-	};
-
-	const prevSlideProduction = () => {
-		productionCarousel.value.prev();
-	};
-
-	window.matchMedia('screen and (max-width: 600px)').onchange = (e) => {
-		carouselVisibleItems.value = e.matches ? 1.3 : 3.5;
-	};
+	window.matchMedia('screen and (max-width: 600px)').onchange = (e) =>
+		(carouselVisibleItems.value = e.matches ? 1.3 : 3.5);
 
 	onMounted(() => (carouselVisibleItems.value = calculateMediaQueryMax(600) ? 1.3 : 3.5));
 </script>
@@ -291,11 +211,6 @@
 		&__production-section {
 			position: relative;
 			height: fit-content;
-
-			#{$parent}__orchards-carousel,
-			#{$parent}__production-carousel {
-				margin: 0 -10rem;
-			}
 		}
 
 		&__text-section {
@@ -312,66 +227,10 @@
 			}
 		}
 
-		.carousel {
-			&__item {
-				img {
-					max-width: 95%;
-					border-radius: 1.2rem;
-				}
-			}
-
-			&__icon {
-				fill: white;
-			}
-		}
-
-		.carousel-nav-button {
-			position: absolute;
-			top: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 5.6rem;
-			height: 5.6rem;
-			transform: translateY(-50%);
-			border: 1px solid #dddddd;
-			border-radius: 100%;
-			background-color: #fafafa;
-
-			&__left {
-				left: 7rem;
-			}
-
-			&__right {
-				right: 7rem;
-			}
-		}
-
 		@media only screen and (max-width: 600px) {
 			&__section-wrapper,
 			&__text-section {
 				padding: 0 1.6rem;
-			}
-
-			&__orchards-section,
-			&__production-section {
-				position: relative;
-				height: fit-content;
-
-				#{$parent}__orchards-carousel,
-				#{$parent}__production-carousel {
-					margin: 0 -1.6rem;
-				}
-			}
-
-			.carousel-nav-button {
-				&__left {
-					left: 1rem;
-				}
-
-				&__right {
-					right: 1rem;
-				}
 			}
 		}
 
