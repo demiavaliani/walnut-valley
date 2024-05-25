@@ -104,6 +104,14 @@ const languages = {
 		'our-orchards.village.description':
 			'კაკლის ველის ბაღები მუხრანის ველზე მდებარე სოფელ ძალისში მდებარეობს. ძალისი ანტიკური ხანის ერთ-ერთი მნიშვნელოვანი არქეოლოგიური ძეგლია.',
 		'our-orchards.village.button-text': 'კითხვის გაგრძელება',
+		'dzalisi.banner.title': 'ძალისი - ისტორიული სოფელი',
+		'dzalisi.body.text-1': `
+			კაკლის ველის ბაღები მუხრანის ველზე მდებარე სოფელ ძალისში მდებარეობს. ძალისი ანტიკური ხანის ერთ-ერთი მნიშვნელოვანი არქეოლოგიური ძეგლია. ნაქალაქარი, რომელიც კაკლის ველის საწარმოსთან ახლოს მდებარეობს, ძველი წელთაღრიცხვით II - ახალი წელთაღრიცხვით VIII საუკუნეებით თარიღდება. ნაქალაქარი 1971 წელს იქნა აღმოჩენილი. იგი მოიცავს ანტიკური ხანის ტაძრის, სასახლის, აფსიდიანი ნაგებობის, ატრიუმის, სასახლის აბანოს, აუზისა და საცხოვრებელ ნაგებობათა ნაშთებს. შემორჩენილია აგურით მოკირწყლული ქუჩებისა და მოედნების ნაწილი და უნიკალური მოზაიკური იატაკები.
+		`,
+		'dzalisi.body.text-2': `
+			კაკლის ველის საწარმოს სტუმრებს შესაძლებლობა აქვთ მოინახულონ ძალისის ნაქალაქარის მუზეუმ-ნაკრძალი.<br><br>
+			მუზეუმ-ნაკრძალი მუშაობს ყოველდღე, ორშაბათის გარდა, 10:00-დან 18:00 საათამდე.
+		`,
 	},
 	english: {
 		'navbar.main': 'Home',
@@ -185,6 +193,11 @@ const languages = {
 		'our-orchards.village.description':
 			'Walnut Valley Gardens, situated in the historic village of Dzalisi in the Mukhrani Valley, boast archaeological ruins dating from the 2nd to 8th centuries AD.',
 		'our-orchards.village.button-text': 'Read more',
+		'dzalisi.banner.title': 'Dzalisi - historical village',
+		'dzalisi.body.text-1':
+			'Walnut Valley Gardens, situated in the historic village of Dzalisi in the Mukhrani Valley, boast archaeological ruins dating from the 2nd to 8th centuries AD. Discovered in 1971, the site includes remnants of an ancient temple, palace, apsidal building, atrium, palace bath, pool, residential structures, brick-paved streets, and unique mosaic floors.',
+		'dzalisi.body.text-2':
+			'Visitors to Walnut Valley can explore the Dzalisi Museum, open daily from 10:00 to 18:00, excluding Mondays.',
 	},
 	russian: {
 		'navbar.main': 'Главная',
@@ -268,5 +281,12 @@ const languages = {
 		'our-orchards.village.description':
 			'Сады Walnut Valley расположены в деревне Дзалиси в Мухранской долине. Дзалиси является одним из важных археологических памятников антического периода.',
 		'our-orchards.village.button-text': 'Читать далее',
+		'dzalisi.banner.title': 'Дзалиси - историческая деревня',
+		'dzalisi.body.text-1':
+			'Сады Walnut Valley расположены в деревне Дзалиси в Мухранской долине. Дзалиси является одним из важных археологических памятников антического периода. Руины города, расположенные недалеко от нашего производства, датируется 2-8 веками нашей эры. Памятник был открыт в 1971 году. Он включает в себя остатки древнего храма, дворца, апсидального здания, атриума, дворцовой бани, бассейна и жилых построек. Сохранились некоторые мощеные улицы и площади, уникальные мозаичные полы.',
+		'dzalisi.body.text-2': `
+			Гости предприятия Walnut Valley имеют возможность посетить музей-заповедник Дзалиси.<br><br>
+			Музей-заповедник открыт ежедневно, кроме понедельника, с 10:00 до 18:00.
+		`,
 	},
 };
