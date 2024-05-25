@@ -24,9 +24,9 @@
 			<RouterLink :to="{ name: Views.PRODUCTION }" class="navbar__item">
 				{{ t('navbar.production') }}
 			</RouterLink>
-			<button class="navbar__item">
+			<RouterLink :to="{ name: Views.ORCHARDS }" class="navbar__item">
 				{{ t('navbar.our-orchards') }}
-			</button>
+			</RouterLink>
 			<button class="navbar__item">
 				{{ t('navbar.our-product') }}
 			</button>
@@ -71,9 +71,9 @@
 			<RouterLink :to="{ name: Views.PRODUCTION }" class="navbar-mobile__item">
 				{{ t('navbar.production') }}
 			</RouterLink>
-			<button class="navbar-mobile__item">
+			<RouterLink :to="{ name: Views.ORCHARDS }" class="navbar-mobile__item">
 				{{ t('navbar.our-orchards') }}
-			</button>
+			</RouterLink>
 			<button class="navbar-mobile__item">
 				{{ t('navbar.our-product') }}
 			</button>

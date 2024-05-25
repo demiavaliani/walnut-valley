@@ -90,6 +90,19 @@ const languages = {
 			გასუფთავებული კაკლის გულის წარმოების შემთხვევაში კაკალი გატეხვა და გადარჩევა საწარმოში სრულდება როგორც ავტომატურად, ასევე ხელით. მზა პროდუქცია იფუთება პოლიეთილენის შეფუთვაში.<br><br>
 			წარმოების სრული პროცესის დროს დაცულია საკვების უსაფრთხოების უმკაცრესი ნორმები. გამოცდილი პერსონალი უზრუნველყოფს საწარმოში შემომავალი და გამავალი პროდუქციის მუდმივ მონიტორინგს და აღრიცხვას. საწარმოსა და სასაწყობე მეურნეობაში დაცულია მკაცრი ჰიგიენური ნორმები და მზა პროდუქციის შენახვის სათანადო ტემპერატურული რეჟიმი. ყოველივე ეს საშუალებას გვაძლევს ჩვენს მომხმარებლებს მივაწოდოთ უმაღლესი ხარისხის, უსაფრთხო პროდუქცია.
 		`,
+		'our-orchards.banner-title': 'ჩვენი ბაღები',
+		'our-orchards.body-title': 'ჩვენი ბაღები',
+		'our-orchards.body-text-1': `
+			კაკლის ველის ბაღები 2015 წელს, მცხეთის მუნიციპალიტეტში, სოფელ ძალისში გაშენდა. კაკლის ველის ბაღები გაშენებულია X ჰა ტერიტორიაზე. ბაღების მოსავლიანობა თავის პიკს 2025 წლისთვის მიაღწევს.<br><br>
+			სოფელი ძალისი მუხრანის ველზე მდებარეობს, სადაც საქართველოში საუკეთესო პირობებია კაკლის მოსაყვანად. ზომიერად სუბტროპიკული ჰავა, მზის და წყლის სიუხვე და მიწისქვეშა წყლების უნიკალური ხარისხი, საშუალებას გვაძლევს ვაწარმოოთ უმაღლესი ხარისხისა და საუკეთესო გემოვნური თვისებების მქონე პროდუქტი.
+		`,
+		'our-orchards.body-text-2': `
+			უნიკალურ კლიმატურ პირობებთან ერთად, ჩვენ საშუალება მოგვეცა გამოგვეყენებინა მსოფლიო გამოცდილება და ექსპერტიზა ბაღების სწორი და ეფექტიანი დაგეგმარებისთვის. კაკლის ველის ბაღების დაგეგმარებაში ჩართული იყო ესპანელი ექსპერტი ფედერიკო ლოპეს-ლარინაგა, რომლის მეთვალყურეობითაც განხორციელდა ბაღებისა და საირიგაციო სისტემის პროექტირება.<br><br>
+			კაკლის ველის ბაღები აღჭურვილია თანამედროვე საირიგაციო სისტემით, რომელიც მნიშვნელოვან გავლენას ახდენს პროდუქტის საბოლოო ხარისხზე.
+		`,
+		'our-orchards.village.title': 'ძალისი - ისტორიული სოფელი',
+		'our-orchards.village.description':
+			'კაკლის ველის ბაღები მუხრანის ველზე მდებარე სოფელ ძალისში მდებარეობს. ძალისი ანტიკური ხანის ერთ-ერთი მნიშვნელოვანი არქეოლოგიური ძეგლია.',
 	},
 	english: {
 		'navbar.main': 'Home',
@@ -158,6 +171,18 @@ const languages = {
 			In the case of the production of walnut halves, the cracking and sorting of walnuts in the factory is done both automatically and manually. The finished products are packed in polyethylene packaging.<br><br>
 			Adhering to the strictest food safety standards, Walnut Valley maintains constant monitoring of incoming and outgoing products. Experienced staff ensures rigorous hygiene and proper temperature storage in the enterprise and warehouse. These measures guarantee the highest quality and safety for our customers.
 		`,
+		'our-orchards.banner-title': 'Our orchards',
+		'our-orchards.body-title': 'Production',
+		'our-orchards.body-text-1':
+			'The story of Walnut Valley orchards began in 2015, taking root in the village of Dzalisi within the Mtskheta municipality. Nestled in the heart of the Mukhrani Valley, our orchards span a vast X hectares, strategically positioned to harness the optimal conditions for cultivating exceptional walnuts. As we look forward, the yield of our orchards is anticipated to reach its zenith by the year 2025.',
+		'our-orchards.body-text-2': `
+			Village Dzalisi, situated in the Mukhrani Valley, offers an environment conducive to walnut growth. The moderately subtropical climate, abundant sunlight, and unique quality of underground water collectively contribute to the production of walnuts boasting unparalleled quality and taste.<br><br>
+			Our commitment to excellence goes beyond favorable climatic conditions. Drawing upon global expertise, we enlisted the guidance of Spanish expert Federico López-Larrinaga in the meticulous planning of Walnut Valley Gardens. Under his supervision, the gardens and irrigation system were designed to ensure a harmonious blend of world-class knowledge with the unique Georgian landscape.<br><br>
+			Equipped with a modern irrigation system, our orchards stand as a testament to our dedication to quality. Recognizing the significant impact of efficient irrigation on the final product, we spare no effort in implementing state-of-the-art technology to enhance the overall quality of our walnuts.
+		`,
+		'our-orchards.village.title': 'Dzalisi - historical village',
+		'our-orchards.village.description':
+			'Walnut Valley Gardens, situated in the historic village of Dzalisi in the Mukhrani Valley, boast archaeological ruins dating from the 2nd to 8th centuries AD.',
 	},
 	russian: {
 		'navbar.main': 'Главная',
@@ -228,5 +253,17 @@ const languages = {
 			В случае производства очищенных сердцевин грецких орехов раскалывание и сортировка грецких орехов на заводе производится как автоматически, так и вручную. Готовая продукция упаковывается в полиэтиленовую упаковку.<br><br>
 			На протяжении всего производственного цикла соблюдаются самые строгие стандарты пищевой безопасности. Опытный персонал обеспечивает постоянный контроль и учет поступающей и исходящей продукции на предприятии. На производстве и складе соблюдаются строгие гигиенические нормы и соответствующий температурный режим хранения готовой продукции. Все это позволяет нам предоставлять нашим клиентам не только самую качественную, но и безопасную продукцию.
 		`,
+		'our-orchards.banner-title': 'Наши сады',
+		'our-orchards.body-title': 'Производство',
+		'our-orchards.body-text-1':
+			'Сады Walnut Valley были посажены в 2015 году в селе Дзалиси муниципалитета Мцхета. Сады Ореховой долины засажены на территории Х га. Урожайность садов достигнет своего пика к 2025 году.',
+		'our-orchards.body-text-2': `
+			Село Дзалиси расположено в Мухранской долине, где условия для выращивания грецких орехов в Грузии одни из лучших. Умеренно-субтропический климат, обилие солнца и воды, а также уникальное качество подземных вод позволяют нам производить продукт высочайшего качества и наилучшего вкуса.<br><br>
+			В сочетании с уникальными климатическими условиями мы смогли использовать мировой опыт и знания для правильного и эффективного планирования садов. В планировании садов Ореховой долины участвовал испанский эксперт Федерико Лопес-Ларинага, под руководством которого были спроектированы сады и ирригационная система.<br><br>
+			Сады компании оснащены современной системой ирригации, что оказывает существенное положительное влияние на конечное качество продукции.
+		`,
+		'our-orchards.village.title': 'Дзалиси - историческая деревня',
+		'our-orchards.village.description':
+			'Сады Walnut Valley расположены в деревне Дзалиси в Мухранской долине. Дзалиси является одним из важных археологических памятников антического периода.',
 	},
 };
