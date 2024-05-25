@@ -82,6 +82,14 @@ const languages = {
 		'contact-us.submit-button': 'გაგზავნა',
 		'contact-us.form-validity-message': 'გთხოვთ შეავსოთ ველი',
 		'contact-us.form-validity-message.email': 'გთხოვთ სწორედ შეიყვანოთ ელ. ფოსტა',
+		'production.banner-title': 'საწარმო პროცესი',
+		'production.body-title': 'წარმოება',
+		'production.body-text-1':
+			'კაკლის ველი კაკლის მოსავალს წელიწადში ერთხელ, გვიან შემოდგომაზე იღებს. კრეფის შემდეგ კაკალს გარე მწვანე ქერქს (ჩენჩოს) სპეციალური დანადგარი აშორებს, რის შემდეგაც ხდება კაკლის გაშრობა და დეჰიდრატაცია ტენიანობის ოპტიმალური 8%-ის შენარჩუნებით. გაშრობის შემდეგ ხდება კაკლის ავტომატური კალიბრაცია და სორტირება, რის შემდეგაც კაკალი იფუთება ბადის ტომრებში და მზადაა ტრანსპორტირებისთვის.',
+		'production.body-text-2': `
+			გასუფთავებული კაკლის გულის წარმოების შემთხვევაში კაკალი გატეხვა და გადარჩევა საწარმოში სრულდება როგორც ავტომატურად, ასევე ხელით. მზა პროდუქცია იფუთება პოლიეთილენის შეფუთვაში.<br><br>
+			წარმოების სრული პროცესის დროს დაცულია საკვების უსაფრთხოების უმკაცრესი ნორმები. გამოცდილი პერსონალი უზრუნველყოფს საწარმოში შემომავალი და გამავალი პროდუქციის მუდმივ მონიტორინგს და აღრიცხვას. საწარმოსა და სასაწყობე მეურნეობაში დაცულია მკაცრი ჰიგიენური ნორმები და მზა პროდუქციის შენახვის სათანადო ტემპერატურული რეჟიმი. ყოველივე ეს საშუალებას გვაძლევს ჩვენს მომხმარებლებს მივაწოდოთ უმაღლესი ხარისხის, უსაფრთხო პროდუქცია.
+		`,
 	},
 	english: {
 		'navbar.main': 'Home',
@@ -142,6 +150,14 @@ const languages = {
 		'contact-us.submit-button': 'Send',
 		'contact-us.form-validity-message': 'Please fill in the field',
 		'contact-us.form-validity-message.email': 'Please fill correct email',
+		'production.banner-title': 'Production process',
+		'production.body-title': 'Production',
+		'production.body-text-1':
+			"Walnut Valley's walnut harvest occurs once a year, in late autumn. After picking, a specialized machine removes walnuts from green husks. The walnuts undergo drying and dehydration, maintaining an optimal 8% moisture content. Automated calibration and sorting follow, and the walnuts are then packed in mesh bags, ready for transportation.",
+		'production.body-text-2': `
+			In the case of the production of walnut halves, the cracking and sorting of walnuts in the factory is done both automatically and manually. The finished products are packed in polyethylene packaging.<br><br>
+			Adhering to the strictest food safety standards, Walnut Valley maintains constant monitoring of incoming and outgoing products. Experienced staff ensures rigorous hygiene and proper temperature storage in the enterprise and warehouse. These measures guarantee the highest quality and safety for our customers.
+		`,
 	},
 	russian: {
 		'navbar.main': 'Главная',
@@ -204,5 +220,13 @@ const languages = {
 		'contact-us.form-validity-message': 'Пожалуйста, заполните поле',
 		'contact-us.form-validity-message.email':
 			'Пожалуйста, заполните правильный адрес электронной почты',
+		'production.banner-title': 'производственный процесс',
+		'production.body-title': 'Производство',
+		'production.body-text-1':
+			'Урожай в Walnut Valley собирают раз в год, поздней осенью. После сбора с грецких орехов с помощью специальной машины снимается внешняя зеленая кожица, после чего грецкие орехи сушат и обезвоживают, поддерживая оптимальную влажность 8%. После сушки грецкие орехи проходят автоматический процесс калибровки и сортировки, после чего орехи упаковываются в сетчатые мешки и готовы к транспортировке.',
+		'production.body-text-2': `
+			В случае производства очищенных сердцевин грецких орехов раскалывание и сортировка грецких орехов на заводе производится как автоматически, так и вручную. Готовая продукция упаковывается в полиэтиленовую упаковку.<br><br>
+			На протяжении всего производственного цикла соблюдаются самые строгие стандарты пищевой безопасности. Опытный персонал обеспечивает постоянный контроль и учет поступающей и исходящей продукции на предприятии. На производстве и складе соблюдаются строгие гигиенические нормы и соответствующий температурный режим хранения готовой продукции. Все это позволяет нам предоставлять нашим клиентам не только самую качественную, но и безопасную продукцию.
+		`,
 	},
 };

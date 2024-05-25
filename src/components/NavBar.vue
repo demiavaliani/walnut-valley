@@ -21,9 +21,9 @@
 					<button>{{ t('navbar.company.our-history') }}</button>
 				</div>
 			</div>
-			<button class="navbar__item">
+			<RouterLink :to="{ name: Views.PRODUCTION }" class="navbar__item">
 				{{ t('navbar.production') }}
-			</button>
+			</RouterLink>
 			<button class="navbar__item">
 				{{ t('navbar.our-orchards') }}
 			</button>
@@ -68,9 +68,9 @@
 				</div>
 			</div>
 
-			<button class="navbar-mobile__item">
+			<RouterLink :to="{ name: Views.PRODUCTION }" class="navbar-mobile__item">
 				{{ t('navbar.production') }}
-			</button>
+			</RouterLink>
 			<button class="navbar-mobile__item">
 				{{ t('navbar.our-orchards') }}
 			</button>
@@ -95,7 +95,7 @@
 	import { ref, computed, onMounted } from 'vue';
 	import { useSite } from '@/stores/site';
 	import { useTranslation } from '@/utils/translations';
-	import WvButton from './WvButton.vue';
+	import { WvButton } from './index';
 	import { calculateMediaQueryMax } from '@/utils/mediaQuery';
 	import { Views } from '@/constants';
 

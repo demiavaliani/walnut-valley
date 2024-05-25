@@ -3,3 +3,7 @@ export const SiteLanguages = {
 	english: 'english',
 	russian: 'russian',
 } as const;
+
+export interface CarouselSlide {
+	image: string;
+}

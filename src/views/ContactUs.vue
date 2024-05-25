@@ -93,7 +93,7 @@
 <script lang="ts" setup>
 	import { ref } from 'vue';
 	import { useTranslation } from '@/utils';
-	import WvButton from '@/components/WvButton.vue';
+	import { WvButton } from '@/components';
 	import emailjs from '@emailjs/browser';
 
 	const SERVICE_ID = 'wv_email_form';
