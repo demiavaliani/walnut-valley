@@ -110,7 +110,7 @@ const languages = {
 		`,
 		'dzalisi.body.text-2': `
 			კაკლის ველის საწარმოს სტუმრებს შესაძლებლობა აქვთ მოინახულონ ძალისის ნაქალაქარის მუზეუმ-ნაკრძალი.<br><br>
-			მუზეუმ-ნაკრძალი მუშაობს ყოველდღე, ორშაბათის გარდა, 10:00-დან 18:00 საათამდე.
+			მუზეუმ-ნაკრძალი მუშაობს ყოველდღე, ორშაბათის გარდა, <strong>10:00</strong>-დან <strong>18:00</strong> საათამდე.
 		`,
 	},
 	english: {
@@ -197,7 +197,7 @@ const languages = {
 		'dzalisi.body.text-1':
 			'Walnut Valley Gardens, situated in the historic village of Dzalisi in the Mukhrani Valley, boast archaeological ruins dating from the 2nd to 8th centuries AD. Discovered in 1971, the site includes remnants of an ancient temple, palace, apsidal building, atrium, palace bath, pool, residential structures, brick-paved streets, and unique mosaic floors.',
 		'dzalisi.body.text-2':
-			'Visitors to Walnut Valley can explore the Dzalisi Museum, open daily from 10:00 to 18:00, excluding Mondays.',
+			'Visitors to Walnut Valley can explore the Dzalisi Museum, open daily from <strong>10:00</strong> to <strong>18:00</strong>, excluding Mondays.',
 	},
 	russian: {
 		'navbar.main': 'Главная',
@@ -286,7 +286,7 @@ const languages = {
 			'Сады Walnut Valley расположены в деревне Дзалиси в Мухранской долине. Дзалиси является одним из важных археологических памятников антического периода. Руины города, расположенные недалеко от нашего производства, датируется 2-8 веками нашей эры. Памятник был открыт в 1971 году. Он включает в себя остатки древнего храма, дворца, апсидального здания, атриума, дворцовой бани, бассейна и жилых построек. Сохранились некоторые мощеные улицы и площади, уникальные мозаичные полы.',
 		'dzalisi.body.text-2': `
 			Гости предприятия Walnut Valley имеют возможность посетить музей-заповедник Дзалиси.<br><br>
-			Музей-заповедник открыт ежедневно, кроме понедельника, с 10:00 до 18:00.
+			Музей-заповедник открыт ежедневно, кроме понедельника, с <strong>10:00</strong> до <strong>18:00</strong>.
 		`,
 	},
 };
