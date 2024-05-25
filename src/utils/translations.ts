@@ -103,6 +103,7 @@ const languages = {
 		'our-orchards.village.title': 'ძალისი - ისტორიული სოფელი',
 		'our-orchards.village.description':
 			'კაკლის ველის ბაღები მუხრანის ველზე მდებარე სოფელ ძალისში მდებარეობს. ძალისი ანტიკური ხანის ერთ-ერთი მნიშვნელოვანი არქეოლოგიური ძეგლია.',
+		'our-orchards.village.button-text': 'კითხვის გაგრძელება',
 	},
 	english: {
 		'navbar.main': 'Home',
@@ -183,6 +184,7 @@ const languages = {
 		'our-orchards.village.title': 'Dzalisi - historical village',
 		'our-orchards.village.description':
 			'Walnut Valley Gardens, situated in the historic village of Dzalisi in the Mukhrani Valley, boast archaeological ruins dating from the 2nd to 8th centuries AD.',
+		'our-orchards.village.button-text': 'Read more',
 	},
 	russian: {
 		'navbar.main': 'Главная',
@@ -265,5 +267,6 @@ const languages = {
 		'our-orchards.village.title': 'Дзалиси - историческая деревня',
 		'our-orchards.village.description':
 			'Сады Walnut Valley расположены в деревне Дзалиси в Мухранской долине. Дзалиси является одним из важных археологических памятников антического периода.',
+		'our-orchards.village.button-text': 'Читать далее',
 	},
 };

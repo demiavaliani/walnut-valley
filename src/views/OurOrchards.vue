@@ -31,7 +31,13 @@
 					<p
 						class="our-orchards__village-description"
 						v-html="t('our-orchards.village.description')"
-					></p>
+					/>
+					<RouterLink :to="{ name: Views.DZALISI }">
+						<WvButton
+							class="our-orchards__village-button"
+							:text="t('our-orchards.village.button-text')"
+						/>
+					</RouterLink>
 				</div>
 				<div class="our-orchards__village-right">
 					<img src="../assets/images/orchard-sample-image.jpeg" />
@@ -45,7 +51,8 @@
 <script lang="ts" setup>
 	import { ref, onMounted } from 'vue';
 	import { calculateMediaQueryMax, useTranslation } from '@/utils';
-	import { CarouselWrapper } from '@/components';
+	import { CarouselWrapper, WvButton } from '@/components';
+	import { Views } from '@/constants';
 
 	const { t } = useTranslation();
 
@@ -207,10 +214,18 @@
 		}
 
 		&__village-description {
+			margin-bottom: 2.4rem;
 			font-size: 1.6rem;
 			font-weight: $wv-fw-regular;
 			line-height: 2.4rem;
 			color: #222222b2;
+		}
+
+		&__village-button {
+			width: fit-content;
+			font-size: 1.4rem;
+			font-weight: $wv-fw-medium;
+			line-height: 2rem;
 		}
 
 		&__village-left {

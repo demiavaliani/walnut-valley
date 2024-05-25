@@ -6,4 +6,5 @@ export const Views = {
 	ORCHARDS: 'orchards',
 	OUR_PRODUCT: 'our_product',
 	CONTACT_US: 'contact_us',
+	DZALISI: 'dzalisi',
 } as const;
