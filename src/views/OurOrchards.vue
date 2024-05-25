@@ -99,7 +99,7 @@
 		},
 	];
 
-	const carouselVisibleItems = ref();
+	const carouselVisibleItems = ref(1.3);
 	const carouselSnapAlign = ref();
 
 	window.matchMedia('screen and (max-width: 600px)').onchange = (e) => {

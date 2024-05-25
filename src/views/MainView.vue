@@ -136,7 +136,7 @@
 		},
 	];
 
-	const carouselVisibleItems = ref();
+	const carouselVisibleItems = ref(1.3);
 
 	window.matchMedia('screen and (max-width: 600px)').onchange = (e) =>
 		(carouselVisibleItems.value = e.matches ? 1.3 : 3.5);
