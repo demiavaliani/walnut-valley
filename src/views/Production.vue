@@ -1,5 +1,5 @@
 <template>
-	<div class="production">
+	<div class="production" ref="productionView">
 		<div class="production__banner">
 			<p class="production__banner-title">{{ t('production.banner-title') }}</p>
 		</div>
@@ -27,9 +27,10 @@
 </template>
 
 <script lang="ts" setup>
-	import { ref, onMounted } from 'vue';
-	import { calculateMediaQueryMax, useTranslation } from '@/utils';
+	import { ref } from 'vue';
+	import { useTranslation } from '@/utils';
 	import { CarouselWrapper } from '@/components';
+	import { useResizeObserver } from '@vueuse/core';
 
 	const { t } = useTranslation();
 
@@ -76,17 +77,30 @@
 		},
 	];
 
+	const productionView = ref<HTMLElement | null>(null);
 	const carouselVisibleItems = ref(1.3);
 	const carouselSnapAlign = ref();
 
-	window.matchMedia('screen and (max-width: 600px)').onchange = (e) => {
-		carouselVisibleItems.value = e.matches ? 1.3 : 4;
-		carouselSnapAlign.value = e.matches ? 'center-odd' : 'center-even';
-	};
+	useResizeObserver(productionView, (entries) => {
+		const { width } = entries[0].contentRect;
 
-	onMounted(() => {
-		carouselVisibleItems.value = calculateMediaQueryMax(600) ? 1.3 : 4;
-		carouselSnapAlign.value = calculateMediaQueryMax(600) ? 'center-odd' : 'center-even';
+		switch (true) {
+			case width < 600:
+				carouselVisibleItems.value = 1.2;
+				carouselSnapAlign.value = 'start';
+				break;
+			case width > 3100:
+				carouselVisibleItems.value = 6;
+				carouselSnapAlign.value = 'center-even';
+				break;
+			case width > 2500:
+				carouselVisibleItems.value = 5;
+				carouselSnapAlign.value = 'center-odd';
+				break;
+			default:
+				carouselVisibleItems.value = 4;
+				carouselSnapAlign.value = 'center-even';
+		}
 	});
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-	<div class="main-view">
+	<div class="main-view" ref="mainView">
 		<div class="main-view__media"></div>
 
 		<div class="main-view__text-section">
@@ -60,7 +60,11 @@
 				{{ t('main.our-orchards-description') }}
 			</p>
 
-			<CarouselWrapper :slides="slides" :items-to-show="carouselVisibleItems" />
+			<CarouselWrapper
+				:slides="slides"
+				:items-to-show="carouselVisibleItems"
+				:snap-align="carouselSnapAlign"
+			/>
 		</div>
 
 		<div
@@ -77,7 +81,11 @@
 				{{ t('main.our-production-description') }}
 			</p>
 
-			<CarouselWrapper :slides="slides" :items-to-show="carouselVisibleItems" />
+			<CarouselWrapper
+				:slides="slides"
+				:items-to-show="carouselVisibleItems"
+				:snap-align="carouselSnapAlign"
+			/>
 		</div>
 
 		<div class="main-view__text-section main-view__text-section--narrow">
@@ -87,9 +95,10 @@
 </template>
 
 <script lang="ts" setup>
-	import { ref, onMounted } from 'vue';
-	import { calculateMediaQueryMax, useTranslation } from '@/utils';
+	import { ref } from 'vue';
+	import { useTranslation } from '@/utils';
 	import { CarouselWrapper } from '@/components';
+	import { useResizeObserver } from '@vueuse/core';
 
 	const { t } = useTranslation();
 
@@ -136,12 +145,31 @@
 		},
 	];
 
+	const mainView = ref<HTMLElement | null>(null);
 	const carouselVisibleItems = ref(1.3);
+	const carouselSnapAlign = ref();
 
-	window.matchMedia('screen and (max-width: 600px)').onchange = (e) =>
-		(carouselVisibleItems.value = e.matches ? 1.3 : 3.5);
+	useResizeObserver(mainView, (entries) => {
+		const { width } = entries[0].contentRect;
 
-	onMounted(() => (carouselVisibleItems.value = calculateMediaQueryMax(600) ? 1.3 : 3.5));
+		switch (true) {
+			case width < 600:
+				carouselVisibleItems.value = 1.3;
+				carouselSnapAlign.value = 'center-odd';
+				break;
+			case width > 2800:
+				carouselVisibleItems.value = 6;
+				carouselSnapAlign.value = 'center-odd';
+				break;
+			case width > 2000:
+				carouselVisibleItems.value = 5;
+				carouselSnapAlign.value = 'center-even';
+				break;
+			default:
+				carouselVisibleItems.value = 3.5;
+				carouselSnapAlign.value = 'center-odd';
+		}
+	});
 </script>
 
 <style lang="scss">
