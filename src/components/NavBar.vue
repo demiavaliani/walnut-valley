@@ -33,10 +33,22 @@
 		</div>
 
 		<div class="navbar__right">
-			<button class="navbar__language">
-				<img src="@/assets/images/language-globe.svg" />
-				<p>{{ siteLanguageFormatted }}</p>
-			</button>
+			<div class="navbar__language-dropdown" @click="onLanguageClick">
+				<button class="navbar__language">
+					<img src="@/assets/images/language-globe.svg" />
+					<p>{{ siteLanguageFormatted }}</p>
+				</button>
+				<div
+					:class="[
+						'navbar__language-dropdown-content',
+						{ 'navbar__language-dropdown-content--open': isLanguageDropdownOpen },
+					]"
+				>
+					<button v-for="language in siteLanguages" @click="updateSiteLanguage(language.full)">
+						{{ language.short }}
+					</button>
+				</div>
+			</div>
 			<RouterLink :to="{ name: Views.CONTACT_US }">
 				<WvButton :text="t('navbar.contact-us')"></WvButton>
 			</RouterLink>
@@ -79,10 +91,23 @@
 			</button>
 
 			<div class="navbar-mobile__bottom">
-				<button class="navbar-mobile__language">
-					<img src="@/assets/images/language-globe.svg" />
-					<p>{{ siteLanguageFormatted }}</p>
-				</button>
+				<div class="navbar-mobile__language-dropdown" @click="onLanguageClick">
+					<button class="navbar-mobile__language">
+						<img src="@/assets/images/language-globe.svg" />
+						<p>{{ siteLanguageFormatted }}</p>
+					</button>
+					<div
+						:class="[
+							'navbar__language-dropdown-content',
+							{ 'navbar__language-dropdown-content--open': isLanguageDropdownOpen },
+						]"
+					>
+						<button v-for="language in siteLanguages" @click="updateSiteLanguage(language.full)">
+							{{ language.short }}
+						</button>
+					</div>
+				</div>
+
 				<RouterLink :to="{ name: Views.CONTACT_US }">
 					<WvButton :text="t('navbar.contact-us')"></WvButton>
 				</RouterLink>
@@ -98,14 +123,36 @@
 	import { WvButton } from './index';
 	import { calculateMediaQueryMax } from '@/utils/mediaQuery';
 	import { Views } from '@/constants';
+	import { SiteLanguages } from '@/types';
 
 	const store = useSite();
 	const { t } = useTranslation();
 
 	const isMobile = ref(false);
 	const isHamburgerOpen = ref(false);
+	const isLanguageDropdownOpen = ref(false);
+
+	const siteLanguages = computed(() => {
+		const arr: Array<{ short: keyof typeof SiteLanguages; full: keyof typeof SiteLanguages }> = [];
+
+		Object.keys(SiteLanguages).map((language) => {
+			arr.push({
+				short: language.slice(0, 3).toUpperCase() as keyof typeof SiteLanguages,
+				full: language as keyof typeof SiteLanguages,
+			});
+		});
+
+		return arr.filter((item) => item.short != siteLanguageFormatted.value);
+	});
 
 	const siteLanguageFormatted = computed(() => store.siteLanguage.slice(0, 3).toUpperCase());
+
+	const onLanguageClick = () => (isLanguageDropdownOpen.value = !isLanguageDropdownOpen.value);
+
+	const updateSiteLanguage = (language: keyof typeof SiteLanguages) => {
+		store.siteLanguage = language;
+		location.reload();
+	};
 
 	window.matchMedia(`screen and (max-width: 1000px)`).onchange = (e) => {
 		isMobile.value = e.matches;
@@ -215,6 +262,40 @@
 
 			&:hover {
 				color: #6c7340;
+			}
+		}
+
+		&__language-dropdown {
+			position: relative;
+			display: flex;
+		}
+
+		&__language-dropdown-content {
+			position: absolute;
+			top: 4.5rem;
+			left: 1rem;
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+			width: 7rem;
+			height: 0;
+			padding-left: 2rem;
+			border-radius: 0.3rem;
+			background-color: white;
+			transition: height 0.1s linear;
+			overflow: hidden;
+
+			& * {
+				line-height: 2rem;
+				color: #222222;
+
+				&:hover {
+					color: #6c7340;
+				}
+			}
+
+			&--open {
+				height: 6rem;
 			}
 		}
 
@@ -347,6 +428,12 @@
 			&:hover {
 				color: #6c7340;
 			}
+		}
+
+		&__language-dropdown {
+			position: relative;
+			display: flex;
+			font-size: 1.6rem;
 		}
 	}
 </style>
