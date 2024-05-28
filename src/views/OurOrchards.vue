@@ -1,5 +1,5 @@
 <template>
-	<div class="our-orchards">
+	<div class="our-orchards" ref="ourOrchardsView">
 		<div class="our-orchards__banner">
 			<p class="our-orchards__banner-title">{{ t('our-orchards.banner-title') }}</p>
 		</div>
@@ -31,7 +31,13 @@
 					<p
 						class="our-orchards__village-description"
 						v-html="t('our-orchards.village.description')"
-					></p>
+					/>
+					<RouterLink :to="{ name: Views.DZALISI }">
+						<WvButton
+							class="our-orchards__village-button"
+							:text="t('our-orchards.village.button-text')"
+						/>
+					</RouterLink>
 				</div>
 				<div class="our-orchards__village-right">
 					<img src="../assets/images/orchard-sample-image.jpeg" />
@@ -43,9 +49,11 @@
 </template>
 
 <script lang="ts" setup>
-	import { ref, onMounted } from 'vue';
-	import { calculateMediaQueryMax, useTranslation } from '@/utils';
-	import { CarouselWrapper } from '@/components';
+	import { ref } from 'vue';
+	import { useTranslation } from '@/utils';
+	import { CarouselWrapper, WvButton } from '@/components';
+	import { Views } from '@/constants';
+	import { useResizeObserver } from '@vueuse/core';
 
 	const { t } = useTranslation();
 
@@ -92,17 +100,30 @@
 		},
 	];
 
-	const carouselVisibleItems = ref();
+	const ourOrchardsView = ref<HTMLElement | null>(null);
+	const carouselVisibleItems = ref(1.3);
 	const carouselSnapAlign = ref();
 
-	window.matchMedia('screen and (max-width: 600px)').onchange = (e) => {
-		carouselVisibleItems.value = e.matches ? 1.3 : 4;
-		carouselSnapAlign.value = e.matches ? 'center-odd' : 'center-even';
-	};
+	useResizeObserver(ourOrchardsView, (entries) => {
+		const { width } = entries[0].contentRect;
 
-	onMounted(() => {
-		carouselVisibleItems.value = calculateMediaQueryMax(600) ? 1.3 : 4;
-		carouselSnapAlign.value = calculateMediaQueryMax(600) ? 'center-odd' : 'center-even';
+		switch (true) {
+			case width < 600:
+				carouselVisibleItems.value = 1.2;
+				carouselSnapAlign.value = 'start';
+				break;
+			case width > 3100:
+				carouselVisibleItems.value = 6;
+				carouselSnapAlign.value = 'center-even';
+				break;
+			case width > 2500:
+				carouselVisibleItems.value = 5;
+				carouselSnapAlign.value = 'center-odd';
+				break;
+			default:
+				carouselVisibleItems.value = 4;
+				carouselSnapAlign.value = 'center-even';
+		}
 	});
 </script>
 
@@ -207,10 +228,18 @@
 		}
 
 		&__village-description {
+			margin-bottom: 2.4rem;
 			font-size: 1.6rem;
 			font-weight: $wv-fw-regular;
 			line-height: 2.4rem;
 			color: #222222b2;
+		}
+
+		&__village-button {
+			width: fit-content;
+			font-size: 1.4rem;
+			font-weight: $wv-fw-medium;
+			line-height: 2rem;
 		}
 
 		&__village-left {

@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import { Views } from '@/constants';
-import { MainView, OurCompany, ContactUs, Production, OurOrchards } from '@/views';
+import { MainView, OurCompany, ContactUs, Production, OurOrchards, Dzalisi } from '@/views';
 
 const routes = [
 	{
@@ -28,6 +28,11 @@ const routes = [
 		path: '/our-orchards',
 		name: Views.ORCHARDS,
 		component: OurOrchards,
+	},
+	{
+		path: '/dzalisi',
+		name: Views.DZALISI,
+		component: Dzalisi,
 	},
 ];
 
