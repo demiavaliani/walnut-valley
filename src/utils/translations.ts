@@ -11,9 +11,10 @@ export const useTranslation = () => {
 		| keyof typeof languages.russian;
 
 	const t = (langVar: Translation): string => {
-		const languageArray = languages[language];
+		const languageArray = Object.entries(languages);
+		const languageValues = languageArray.filter((item) => item[0] === language)[0][1];
 
-		const translation = languageArray[langVar];
+		const translation = languageValues[langVar];
 
 		return translation;
 	};
