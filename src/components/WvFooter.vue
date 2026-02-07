@@ -2,8 +2,6 @@
 	<div v-if="!isMobile" class="wv-footer">
 		<div class="wv-footer__column wv-footer__column-one">
 			<img src="@/assets/images/logo-horizontal.svg" />
-
-			<p>{{ t('footer.description') }}</p>
 		</div>
 
 		<div class="wv-footer__column wv-footer__column-two">
@@ -11,31 +9,21 @@
 				{{ t('navbar.main') }}
 			</RouterLink>
 
-			<div class="wv-footer__company-item-dropdown">
-				<button class="wv-footer__company-item">
-					{{ t('navbar.company') }}
-				</button>
+			<RouterLink :to="{ name: Views.OUR_COMPANY }" class="wv-footer__nav-item">
+				{{ t('navbar.company.about-us') }}
+			</RouterLink>
 
-				<div class="wv-footer__company-item-dropdown-content">
-					<RouterLink :to="{ name: Views.OUR_COMPANY }" class="wv-footer__nav-item">
-						{{ t('navbar.company.about-us') }}
-					</RouterLink>
-
-					<button class="wv-footer__nav-item">{{ t('navbar.company.our-history') }}</button>
-				</div>
-			</div>
-
-			<button class="wv-footer__nav-item">
-				{{ t('navbar.production') }}
-			</button>
-
-			<button class="wv-footer__nav-item">
+			<RouterLink :to="{ name: Views.ORCHARDS }" class="wv-footer__nav-item">
 				{{ t('navbar.our-orchards') }}
-			</button>
+			</RouterLink>
 
-			<button class="wv-footer__nav-item">
-				{{ t('navbar.our-product') }}
-			</button>
+			<RouterLink :to="{ name: Views.OUR_PRODUCTS }" class="wv-footer__nav-item">
+				{{ t('navbar.our-products') }}
+			</RouterLink>
+
+			<RouterLink :to="{ name: Views.PRODUCTION }" class="wv-footer__nav-item">
+				{{ t('navbar.production') }}
+			</RouterLink>
 		</div>
 
 		<div class="wv-footer__column wv-footer__column-three">
@@ -50,14 +38,14 @@
 				<div class="wv-footer__contacts-item-icon-wrapper">
 					<img src="@/assets/images/location-icon.svg" />
 				</div>
-				<p>Tskaltubo street 29, Tbilisi, Georgia</p>
+				<p>{{ t('contact-us.address') }}</p>
 			</div>
 
 			<div class="wv-footer__contacts-item">
 				<div class="wv-footer__contacts-item-icon-wrapper">
 					<img src="@/assets/images/phone-icon.svg" />
 				</div>
-				<p>+995 579 33 66 08</p>
+				<p>+995 574 42 16 16</p>
 			</div>
 		</div>
 
@@ -74,8 +62,6 @@
 	<div v-else class="wv-footer-mobile">
 		<div class="wv-footer-mobile__column wv-footer-mobile__column-one">
 			<img src="@/assets/images/logo-horizontal.svg" />
-
-			<p>{{ t('footer.description') }}</p>
 		</div>
 
 		<div class="wv-footer-mobile__column wv-footer-mobile__column-two">
@@ -83,31 +69,21 @@
 				{{ t('navbar.main') }}
 			</RouterLink>
 
-			<div class="wv-footer-mobile__company-item-dropdown">
-				<button class="wv-footer-mobile__company-item">
-					{{ t('navbar.company') }}
-				</button>
+			<RouterLink :to="{ name: Views.OUR_COMPANY }" class="wv-footer-mobile__nav-item">
+				{{ t('navbar.company.about-us') }}
+			</RouterLink>
 
-				<div class="wv-footer-mobile__company-item-dropdown-content">
-					<RouterLink :to="{ name: Views.OUR_COMPANY }" class="wv-footer-mobile__nav-item">
-						{{ t('navbar.company.about-us') }}
-					</RouterLink>
-
-					<button class="wv-footer-mobile__nav-item">{{ t('navbar.company.our-history') }}</button>
-				</div>
-			</div>
-
-			<button class="wv-footer-mobile__nav-item">
-				{{ t('navbar.production') }}
-			</button>
-
-			<button class="wv-footer-mobile__nav-item">
+			<RouterLink :to="{ name: Views.ORCHARDS }" class="wv-footer-mobile__nav-item">
 				{{ t('navbar.our-orchards') }}
-			</button>
+			</RouterLink>
 
-			<button class="wv-footer-mobile__nav-item">
-				{{ t('navbar.our-product') }}
-			</button>
+			<RouterLink :to="{ name: Views.OUR_PRODUCTS }" class="wv-footer-mobile__nav-item">
+				{{ t('navbar.our-products') }}
+			</RouterLink>
+
+			<RouterLink :to="{ name: Views.PRODUCTION }" class="wv-footer-mobile__nav-item">
+				{{ t('navbar.production') }}
+			</RouterLink>
 		</div>
 
 		<div class="wv-footer-mobile__column wv-footer-mobile__column-three">
@@ -122,14 +98,14 @@
 				<div class="wv-footer-mobile__contacts-item-icon-wrapper">
 					<img src="@/assets/images/location-icon.svg" />
 				</div>
-				<p>Tskaltubo street 29, Tbilisi, Georgia</p>
+				<p>{{ t('contact-us.address') }}</p>
 			</div>
 
 			<div class="wv-footer-mobile__contacts-item">
 				<div class="wv-footer-mobile__contacts-item-icon-wrapper">
 					<img src="@/assets/images/phone-icon.svg" />
 				</div>
-				<p>+995 579 33 66 08</p>
+				<p>+995 574 42 16 16</p>
 			</div>
 		</div>
 
@@ -213,35 +189,6 @@
 
 			&:hover {
 				color: #6c7340;
-			}
-		}
-
-		&__company-item-dropdown {
-			position: relative;
-
-			&:hover {
-				.wv-footer__company-item-dropdown-content {
-					display: flex;
-				}
-			}
-		}
-
-		&__company-item-dropdown-content {
-			position: absolute;
-			top: 0;
-			display: none;
-			flex-direction: column;
-			gap: 1.2rem;
-			width: max-content;
-			padding-left: 12rem;
-
-			& * {
-				line-height: 2.4rem;
-				color: #222222;
-
-				&:hover {
-					color: #6c7340;
-				}
 			}
 		}
 
@@ -351,35 +298,6 @@
 
 			&:hover {
 				color: #6c7340;
-			}
-		}
-
-		&__company-item-dropdown {
-			position: relative;
-
-			&:hover {
-				.wv-footer-mobile__company-item-dropdown-content {
-					display: flex;
-				}
-			}
-		}
-
-		&__company-item-dropdown-content {
-			position: absolute;
-			top: 0;
-			display: none;
-			flex-direction: column;
-			gap: 1.2rem;
-			width: max-content;
-			padding-left: 12rem;
-
-			& * {
-				line-height: 2.4rem;
-				color: #222222;
-
-				&:hover {
-					color: #6c7340;
-				}
 			}
 		}
 

@@ -2,20 +2,31 @@
 	<div class="contact-us">
 		<div class="contact-us__sides">
 			<div class="contact-us__sides-left">
-				<p class="contact-us__header">{{ t('contact-us.header') }}</p>
+				<p class="contact-us__header">{{ t('contact-us.header-1') }}</p>
+
+				<p class="contact-us__description" v-html="t('contact-us.description')" />
+
+				<p class="contact-us__header" v-html="t('contact-us.header-2')"></p>
+
+				<div class="contact-us__email">
+					<div class="contact-us__icon-wrapper">
+						<img src="@/assets/images/email-icon.svg" />
+					</div>
+					<p>info@wv.ge</p>
+				</div>
 
 				<div class="contact-us__mobile">
 					<div class="contact-us__icon-wrapper">
 						<img src="@/assets/images/phone-icon.svg" />
 					</div>
-					<p>+995 579 33 66 08</p>
+					<p>+995 574 42 16 16</p>
 				</div>
 
 				<div class="contact-us__address">
 					<div class="contact-us__icon-wrapper">
 						<img src="@/assets/images/location-icon.svg" />
 					</div>
-					<p>Tskaltubo street 29, Tbilisi, Georgia</p>
+					<p>{{ t('contact-us.address') }}</p>
 				</div>
 
 				<div class="contact-us__social">
@@ -81,12 +92,12 @@
 		</div>
 
 		<iframe
-			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2976.8806479854056!2d44.77351107634191!3d41.74466717125683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044728de9850dfd%3A0xcb3d4e496e1dd967!2sTskaltubo%20St%2C%20T&#39;bilisi%2C%20Georgia!5e0!3m2!1sen!2see!4v1716120635359!5m2!1sen!2see"
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.490368473681!2d44.78701643327206!3d41.74552995063607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044729a0b0b4ea9%3A0x475157bf46fc9fd4!2s26%20Giorgi%20Chkondideli%20St%2C%20T&#39;bilisi%2C%20Georgia!5e0!3m2!1sen!2slv!4v1770557246761!5m2!1sen!2slv"
 			class="contact-us__map"
 			allowfullscreen="false"
 			loading="lazy"
 			referrerpolicy="no-referrer-when-downgrade"
-		></iframe>
+		/>
 	</div>
 </template>
 
@@ -147,6 +158,7 @@
 		&__sides {
 			display: grid;
 			grid-template-columns: auto;
+			column-gap: 50px;
 			margin-bottom: 6.4rem;
 
 			@media only screen and (min-width: 1024px) {
@@ -169,6 +181,13 @@
 			color: #6c7340;
 		}
 
+		&__description {
+			margin-bottom: 2.4rem;
+			color: #222222;
+			font-size: 1.8rem;
+		}
+
+		&__email,
 		&__mobile,
 		&__address {
 			display: flex;

@@ -1,54 +1,17 @@
 <template>
 	<div class="main-view" ref="mainView">
-		<div class="main-view__media"></div>
+		<div class="main-view__media">
+			<iframe
+				src="https://www.youtube.com/embed/ZliR4zGTIdc?autoplay=1&mute=1&loop=1&playlist=ZliR4zGTIdc&controls=1&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1&enablejsapi=1"
+				frameborder="0"
+				allow="autoplay; fullscreen; picture-in-picture"
+				allowfullscreen
+				class="main-view__video"
+			></iframe>
+		</div>
 
 		<div class="main-view__text-section">
 			<p v-html="t('main.main-text-1')"></p>
-		</div>
-
-		<div class="main-view__section-wrapper">
-			<p class="main-view__section-title">
-				{{ t('main.our-products') }}
-			</p>
-
-			<p class="main-view__section-subtitle">
-				{{ t('main.our-products-description') }}
-			</p>
-
-			<div class="main-view__products-showcase">
-				<div class="main-view__product-card">
-					<div class="main-view__product-image"></div>
-
-					<p class="main-view__product-title">ნიგოზი (langvar)</p>
-
-					<p class="main-view__product-description">პროდუქტის მოკლე აღწერა (langvar)</p>
-				</div>
-				<div class="main-view__product-card">
-					<div class="main-view__product-image"></div>
-
-					<p class="main-view__product-title">კაკალი (langvar)</p>
-
-					<p class="main-view__product-description">პროდუქტის მოკლე აღწერა (langvar)</p>
-				</div>
-				<div class="main-view__product-card">
-					<div class="main-view__product-image"></div>
-
-					<p class="main-view__product-title">სეტკები (langvar)</p>
-
-					<p class="main-view__product-description">პროდუქტის მოკლე აღწერა (langvar)</p>
-				</div>
-				<div class="main-view__product-card">
-					<div class="main-view__product-image"></div>
-
-					<p class="main-view__product-title">ბითუმად (langvar)</p>
-
-					<p class="main-view__product-description">პროდუქტის მოკლე აღწერა (langvar)</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="main-view__text-section">
-			<p>{{ t('main.main-text-2') }}</p>
 		</div>
 
 		<div class="main-view__section-wrapper main-view__orchards-section">
@@ -77,19 +40,7 @@
 				{{ t('main.our-production') }}
 			</p>
 
-			<p class="main-view__section-subtitle">
-				{{ t('main.our-production-description') }}
-			</p>
-
-			<CarouselWrapper
-				:slides="slides"
-				:items-to-show="carouselVisibleItems"
-				:snap-align="carouselSnapAlign"
-			/>
-		</div>
-
-		<div class="main-view__text-section main-view__text-section--narrow">
-			<p v-html="t('main.main-text-4')"></p>
+			<p class="main-view__text-section" v-html="t('main.our-production-description')" />
 		</div>
 	</div>
 </template>
@@ -106,47 +57,32 @@
 		{
 			title: 'Slide #1',
 			content: 'Slide 1 content.',
-			image: 'orchard-sample-image.jpeg',
+			image: 'orchards-1.jpg',
 		},
 		{
 			title: 'Slide #2',
 			content: 'Slide 2 content.',
-			image: 'orchard-sample-image.jpeg',
+			image: 'orchards-2.jpg',
 		},
 		{
-			title: 'Slide #1',
-			content: 'Slide 1 content.',
-			image: 'orchard-sample-image.jpeg',
+			title: 'Slide #3',
+			content: 'Slide 3 content.',
+			image: 'orchards-3.jpg',
 		},
 		{
-			title: 'Slide #2',
-			content: 'Slide 2 content.',
-			image: 'orchard-sample-image.jpeg',
+			title: 'Slide #4',
+			content: 'Slide 4 content.',
+			image: 'orchards-4.jpg',
 		},
 		{
-			title: 'Slide #1',
-			content: 'Slide 1 content.',
-			image: 'orchard-sample-image.jpeg',
-		},
-		{
-			title: 'Slide #2',
-			content: 'Slide 2 content.',
-			image: 'orchard-sample-image.jpeg',
-		},
-		{
-			title: 'Slide #1',
-			content: 'Slide 1 content.',
-			image: 'orchard-sample-image.jpeg',
-		},
-		{
-			title: 'Slide #2',
-			content: 'Slide 2 content.',
-			image: 'orchard-sample-image.jpeg',
+			title: 'Slide #5',
+			content: 'Slide 5 content.',
+			image: 'orchards-5.jpg',
 		},
 	];
 
 	const mainView = ref<HTMLElement | null>(null);
-	const carouselVisibleItems = ref(1.3);
+	const carouselVisibleItems = ref(2);
 	const carouselSnapAlign = ref();
 
 	useResizeObserver(mainView, (entries) => {
@@ -166,7 +102,6 @@
 				carouselSnapAlign.value = 'center-even';
 				break;
 			default:
-				carouselVisibleItems.value = 3.5;
 				carouselSnapAlign.value = 'center-odd';
 		}
 	});
@@ -188,9 +123,22 @@
 		}
 
 		&__media {
+			position: relative;
 			width: 100%;
 			height: 70rem;
-			background-color: black;
+			overflow: hidden;
+		}
+
+		&__video {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100vw;
+			height: 56.25vw; /* 16:9 aspect ratio */
+			min-height: 100%;
+			min-width: 177.77vh; /* 16:9 aspect ratio */
+			transform: translate(-50%, -50%);
+			pointer-events: none;
 		}
 
 		&__section-wrapper {
@@ -205,36 +153,6 @@
 			color: #222222;
 		}
 
-		&__products-showcase {
-			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(20rem, calc(25% - 1.5rem)));
-			justify-content: center;
-			gap: 2rem;
-		}
-
-		&__product-image {
-			aspect-ratio: 1;
-			margin-bottom: 1.2rem;
-			border-radius: 1.2rem;
-			background-color: black;
-		}
-
-		&__product-title {
-			margin-bottom: 0.8rem;
-			font-size: 2rem;
-			font-weight: $wv-fw-medium;
-			line-height: 2.4rem;
-			color: #1e1e1e;
-		}
-
-		&__product-description {
-			font-size: 1.6rem;
-			font-weight: $wv-fw-regular;
-			line-height: 2rem;
-			color: #222222;
-			opacity: 60%;
-		}
-
 		&__orchards-section,
 		&__production-section {
 			position: relative;
@@ -242,7 +160,7 @@
 		}
 
 		&__text-section {
-			margin: 8rem 0;
+			margin: 8rem;
 			padding: 0 10rem;
 			font-size: 1.8rem;
 			font-weight: $wv-fw-regular;
@@ -252,6 +170,15 @@
 
 			&--narrow {
 				padding: 0 20%;
+			}
+		}
+
+		&__production-section {
+			margin-bottom: 8rem;
+
+			#{$parent}__text-section {
+				margin: 0;
+				padding: 0;
 			}
 		}
 
@@ -280,16 +207,6 @@
 
 			&__text-section:last-of-type {
 				margin-bottom: 6rem;
-			}
-
-			&__product-title {
-				font-size: 1.4rem;
-				line-height: 1.7rem;
-			}
-
-			&__product-description {
-				font-size: 1.2rem;
-				line-height: 2rem;
 			}
 		}
 	}

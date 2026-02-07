@@ -4,7 +4,6 @@ export const Views = {
 	OUR_HISTORY: 'our_history',
 	PRODUCTION: 'production',
 	ORCHARDS: 'orchards',
-	OUR_PRODUCT: 'our_product',
 	CONTACT_US: 'contact_us',
-	DZALISI: 'dzalisi',
+	OUR_PRODUCTS: 'our_products',
 } as const;

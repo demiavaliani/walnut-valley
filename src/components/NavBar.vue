@@ -10,26 +10,18 @@
 			<RouterLink :to="{ name: Views.MAIN }" class="navbar__item">
 				{{ t('navbar.main') }}
 			</RouterLink>
-			<div class="navbar__item-dropdown">
-				<button class="navbar__item">
-					{{ t('navbar.company') }}
-				</button>
-				<div class="navbar__item-dropdown-content">
-					<RouterLink :to="{ name: Views.OUR_COMPANY }">{{
-						t('navbar.company.about-us')
-					}}</RouterLink>
-					<button>{{ t('navbar.company.our-history') }}</button>
-				</div>
-			</div>
-			<RouterLink :to="{ name: Views.PRODUCTION }" class="navbar__item">
-				{{ t('navbar.production') }}
+			<RouterLink :to="{ name: Views.OUR_COMPANY }" class="navbar__item">
+				{{ t('navbar.company.about-us') }}
 			</RouterLink>
 			<RouterLink :to="{ name: Views.ORCHARDS }" class="navbar__item">
 				{{ t('navbar.our-orchards') }}
 			</RouterLink>
-			<button class="navbar__item">
-				{{ t('navbar.our-product') }}
-			</button>
+			<RouterLink :to="{ name: Views.OUR_PRODUCTS }" class="navbar__item">
+				{{ t('navbar.our-products') }}
+			</RouterLink>
+			<RouterLink :to="{ name: Views.PRODUCTION }" class="navbar__item">
+				{{ t('navbar.production') }}
+			</RouterLink>
 		</div>
 
 		<div class="navbar__right">
@@ -67,28 +59,18 @@
 			<RouterLink :to="{ name: Views.MAIN }" class="navbar-mobile__item">
 				{{ t('navbar.main') }}
 			</RouterLink>
-
-			<div class="navbar-mobile__item-dropdown">
-				<button class="navbar-mobile__item">
-					{{ t('navbar.company') }}
-				</button>
-				<div class="navbar-mobile__item-dropdown-content">
-					<RouterLink :to="{ name: Views.OUR_COMPANY }">{{
-						t('navbar.company.about-us')
-					}}</RouterLink>
-					<button>{{ t('navbar.company.our-history') }}</button>
-				</div>
-			</div>
-
-			<RouterLink :to="{ name: Views.PRODUCTION }" class="navbar-mobile__item">
-				{{ t('navbar.production') }}
+			<RouterLink :to="{ name: Views.OUR_COMPANY }" class="navbar-mobile__item">
+				{{ t('navbar.company.about-us') }}
 			</RouterLink>
 			<RouterLink :to="{ name: Views.ORCHARDS }" class="navbar-mobile__item">
 				{{ t('navbar.our-orchards') }}
 			</RouterLink>
-			<button class="navbar-mobile__item">
-				{{ t('navbar.our-product') }}
-			</button>
+			<RouterLink :to="{ name: Views.OUR_PRODUCTS }" class="navbar-mobile__item">
+				{{ t('navbar.our-products') }}
+			</RouterLink>
+			<RouterLink :to="{ name: Views.PRODUCTION }" class="navbar-mobile__item">
+				{{ t('navbar.production') }}
+			</RouterLink>
 
 			<div class="navbar-mobile__bottom">
 				<div class="navbar-mobile__language-dropdown" @click="onLanguageClick">
@@ -117,7 +99,8 @@
 </template>
 
 <script lang="ts" setup>
-	import { ref, computed, onMounted } from 'vue';
+	import { ref, computed, onMounted, watch } from 'vue';
+	import { useRoute } from 'vue-router';
 	import { useSite } from '@/stores/site';
 	import { useTranslation } from '@/utils/translations';
 	import { WvButton } from './index';
@@ -127,6 +110,7 @@
 
 	const store = useSite();
 	const { t } = useTranslation();
+	const route = useRoute();
 
 	const isMobile = ref(false);
 	const isHamburgerOpen = ref(false);
@@ -153,6 +137,12 @@
 		store.siteLanguage = language;
 		location.reload();
 	};
+
+	watch(route, () => {
+		if (isHamburgerOpen.value) {
+			isHamburgerOpen.value = false;
+		}
+	});
 
 	window.matchMedia(`screen and (max-width: 1000px)`).onchange = (e) => {
 		isMobile.value = e.matches;
@@ -212,43 +202,6 @@
 			}
 		}
 
-		&__item-dropdown {
-			position: relative;
-
-			&:hover {
-				.navbar__item-dropdown-content {
-					height: 6rem;
-					padding-bottom: 1rem;
-				}
-			}
-		}
-
-		&__item-dropdown-content {
-			position: absolute;
-			box-sizing: content-box;
-			display: flex;
-			flex-direction: column;
-			gap: 2rem;
-			width: max-content;
-			height: 0;
-			padding: 2rem 1rem 0rem;
-			border-radius: 0.3rem;
-			background-color: white;
-			transition: height 0.1s linear;
-
-			& * {
-				overflow: hidden;
-				line-height: 2rem;
-				color: #222222;
-				opacity: 60%;
-
-				&:hover {
-					color: #6c7340;
-					opacity: 1;
-				}
-			}
-		}
-
 		&__right {
 			display: flex;
 			justify-content: center;
@@ -284,6 +237,7 @@
 			background-color: white;
 			transition: height 0.1s linear;
 			overflow: hidden;
+			z-index: 999;
 
 			& * {
 				line-height: 2rem;
@@ -295,7 +249,7 @@
 			}
 
 			&--open {
-				height: 6rem;
+				height: 3rem;
 			}
 		}
 
@@ -313,10 +267,6 @@
 			&__item {
 				margin: 0 2rem;
 			}
-
-			&__item-dropdown-content {
-				left: 1rem;
-			}
 		}
 
 		@media only screen and (min-width: 1325px) {
@@ -324,10 +274,6 @@
 
 			&__item {
 				margin: 0 3rem;
-			}
-
-			&__item-dropdown-content {
-				left: 2rem;
 			}
 		}
 	}
@@ -376,41 +322,6 @@
 			&:hover {
 				color: #6c7340;
 				opacity: 1;
-			}
-		}
-
-		&__item-dropdown {
-			position: relative;
-
-			&:hover {
-				.navbar-mobile__item-dropdown-content {
-					display: flex;
-				}
-			}
-		}
-
-		&__item-dropdown-content {
-			position: absolute;
-			top: 0;
-			display: none;
-			flex-direction: column;
-			gap: 1rem;
-			width: max-content;
-			padding-left: calc(100% + 5rem);
-
-			& * {
-				line-height: 2rem;
-				color: #222222;
-				opacity: 60%;
-
-				&:hover {
-					color: #6c7340;
-					opacity: 1;
-				}
-			}
-
-			&:hover {
-				display: flex;
 			}
 		}
 

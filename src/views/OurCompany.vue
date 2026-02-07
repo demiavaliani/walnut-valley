@@ -1,9 +1,5 @@
 <template>
 	<div class="our-company">
-		<div class="our-company__banner">
-			<p>{{ t('banner.header.company') }}</p>
-		</div>
-
 		<div class="our-company__vision">
 			<div class="our-company__vision-left">
 				<p class="our-company__section-title">
@@ -15,8 +11,8 @@
 				></p>
 			</div>
 			<div class="our-company__vision-right">
-				<img src="../assets/images/orchard-sample-image.jpeg" />
-				<img src="../assets/images/orchard-sample-image.jpeg" />
+				<img src="../assets/images/walnut-1.jpg" />
+				<img src="../assets/images/walnut-2.jpg" />
 			</div>
 		</div>
 
@@ -43,19 +39,6 @@
 		align-items: center;
 		width: 100%;
 
-		&__banner {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
-			height: 27rem;
-			margin-bottom: 8rem;
-			font-size: 5rem;
-			font-weight: $wv-fw-semi-bold;
-			background-color: black;
-			color: #ffffff;
-		}
-
 		&__section-title {
 			margin-bottom: 2.4rem;
 			font-size: 3.6rem;
@@ -65,6 +48,7 @@
 		}
 
 		&__section-description {
+			word-break: keep-all;
 			font-size: 1.8rem;
 			font-weight: $wv-fw-regular;
 			line-height: 2.4rem;
@@ -76,8 +60,8 @@
 			display: flex;
 			justify-content: center;
 			gap: 2rem;
-			margin-bottom: 13rem;
-			padding: 1.3rem 10rem;
+			margin: 8rem 0;
+			padding: 0 10rem;
 		}
 
 		&__vision-left {
@@ -96,6 +80,9 @@
 			img {
 				position: relative;
 				max-width: calc(50% - 1rem);
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
 				border-radius: 1.2rem;
 
 				&:nth-child(1) {
@@ -146,10 +133,6 @@
 		}
 
 		@media only screen and (max-width: 430px) {
-			&__banner {
-				margin-bottom: 4rem;
-			}
-
 			&__section-title {
 				margin-bottom: 1.6rem;
 				font-size: 2rem;

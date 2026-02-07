@@ -5,4 +5,4 @@ export const OurCompany = () => import('./OurCompany.vue');
 export const Production = () => import('./Production.vue');
 export const ContactUs = () => import('./ContactUs.vue');
 export const OurOrchards = () => import('./OurOrchards.vue');
-export const Dzalisi = () => import('./Dzalisi.vue');
+export const OurProducts = () => import('./OurProducts.vue');
