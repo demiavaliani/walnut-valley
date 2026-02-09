@@ -1,9 +1,11 @@
 <template>
-	<ComingSoon />
+	<NavBar />
+	<RouterView />
+	<WvFooter />
 </template>
 
 <script setup lang="ts">
-	import ComingSoon from './views/ComingSoon.vue';
+	import { NavBar, WvFooter } from '@/components';
 </script>
 
 <style lang="scss"></style>
