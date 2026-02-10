@@ -2,9 +2,11 @@
 	<div class="main-view" ref="mainView">
 		<div class="main-view__media">
 			<iframe
-				src="https://www.youtube.com/embed/ZliR4zGTIdc?autoplay=1&mute=1&loop=1&playlist=ZliR4zGTIdc&controls=1&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1&enablejsapi=1"
+				src="https://www.youtube.com/embed/BF_y1SEoldI?si=zmhibHGH9TVzD3t4&amp;playlist=BF_y1SEoldI&amp;controls=0&amp;autoplay=1&amp;loop=1&amp;disablekb=1&amp;iv_load_policy=3&amp;playsinline=1&amp;mute=1"
+				title="Walnut Walley - Georgia"
 				frameborder="0"
-				allow="autoplay; fullscreen; picture-in-picture"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				referrerpolicy="strict-origin-when-cross-origin"
 				allowfullscreen
 				class="main-view__video"
 			></iframe>
@@ -124,20 +126,18 @@
 
 		&__media {
 			position: relative;
-			width: 100%;
-			height: 70rem;
+			max-width: 100%;
+			height: 0;
+			padding-bottom: 56.25%;
 			overflow: hidden;
 		}
 
 		&__video {
 			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 100vw;
-			height: 56.25vw; /* 16:9 aspect ratio */
-			min-height: 100%;
-			min-width: 177.77vh; /* 16:9 aspect ratio */
-			transform: translate(-50%, -50%);
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 			pointer-events: none;
 		}
 
